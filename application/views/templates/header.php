@@ -20,9 +20,16 @@
 		<div id="header">
 			<a href="#main-navbar" class="mobile-only" id="mobile-menu-icon"><i class="fa fa-bars fa-2x"></i></a>
 			<a class="title" href="/">
-				<img class="logo" alt="Your logo" src="/assets/img/logo.png">
+				<div class="logo" alt="Your logo"></div>
 			</a>
-			
+			<a class="mobile-only flag-link" id="vex-dex-headers-show" href="#vex-dex-headers">
+				<img src="/assets/img/ButtonV1o.gif">
+				<div>VEX DEX</div>
+			</a>
+			<a class="flag-link" id="flag-resources" href="/resources">
+					<img src="/assets/img/Resources.gif">
+				<div>Resources</div>
+			</a>
 			<div id="vex-dex-headers">
 				<a class="flag-link" href="/vex/vex1">
 					<img src="/assets/img/ButtonV1o.gif">
@@ -45,11 +52,6 @@
 					<div>VEX V</div>
 				</a>
 			</div>
-
-			<a class="flag-link" id="flag-resources" href="/resources">
-					<img src="/assets/img/Resources.gif">
-				<div>Resources</div>
-			</a>		
 		</div>
 
 		<nav id="main-navbar">

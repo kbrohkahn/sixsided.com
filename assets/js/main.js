@@ -8,10 +8,19 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#vex-dex-headers-show").click(function(e) {
+		e.preventDefault();
+		if ($("#vex-dex-headers").css("display") == "none") {
+			$("#vex-dex-headers").show(500);
+		} else {
+			$("#vex-dex-headers").hide(500);
+
+		}
+	});
+
 	$("#content-cover").click(function() {
 		closeNavbar();
 	});
-
 
 	$("#main-navbar span").hover(function() {
 		$(this).children().addClass("animate-flip");
@@ -21,12 +30,14 @@ $(document).ready(function() {
 		$(this).children().removeClass("animate-flip");
 	});
 
+
+
 });
 
 function closeNavbar() {
 	$("#content-cover").hide();
 	$("#main-navbar").animate({
-		left: "calc(-240px - 5%)"
+		left: "calc(-240px - 2%)"
 
 	}, 500, function() {
 		$("#main-navbar").hide();
