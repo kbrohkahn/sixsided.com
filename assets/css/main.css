@@ -102,7 +102,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 #right-footer-desktop {display: initial;}
 #right-footer-mobile,
 #right-footer-desktop {text-align: center;}
-#right-footer-desktop .date {font-weight: bold; font-size: 2em;}
+#right-footer-desktop img {position: absolute; top: 50%; margin-top: -252px; left: 50%; margin-left: -25px;}
 
 #bottom-footer {margin-top: 15px; margin-bottom: 15px;}
 #bottom-footer .footer-div {font-weight: bold; font-style: italic;}
@@ -120,17 +120,6 @@ p {line-height: 1.4em; margin-bottom: 1em}
 .vex-content > div {display: table-cell; vertical-align: middle;}
 .vex-content > div:first-child {width: 200px; text-align: center}
 .vex-content > div:last-child {padding: 5px;}
-
-/* Right footer sizes and positions */
-@media screen and (min-width: 768px) {
-	#right-footer-desktop > div {transform: rotate(-90deg); transform-origin: center; position: absolute; width: 700%; top: 200px; right: -250%;}
-}
-@media screen and (min-width: 992px) {
-	#right-footer-desktop > div {width: 600%; top: 150px; right: -220%;}
-}
-@media screen and (min-width: 1200px) {
-	#right-footer-desktop > div {width: 600%; top: 150px; right: -220%;}
-}
 
 /* Media queries */
 @media screen and (min-width: 768px) {

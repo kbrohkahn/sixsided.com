@@ -1,8 +1,5 @@
 $(document).ready(function() {
-	$("#right-footer-desktop-rotated").css({
-		"height": $("#right-footer-desktop").css("width"),
-		"width": $("#content").css("height")
-	});
+	$("#right-footer-desktop").css("height", $("#content").css("height"));	
 
 	$("#mobile-menu-icon").click(function(e) {
 		e.preventDefault();
