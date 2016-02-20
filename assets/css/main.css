@@ -64,7 +64,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 #container {border: solid 2px black; border-radius: 15px; margin: 2%; background: white;box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);}
 
 /* Header */
-#main-navbar {z-index: 12;}
+#main-navbar {z-index: 12; }
 #main-navbar span a {display: block; padding: 15px 5px; border: solid black 1px; color: #000}
 #main-navbar span a:hover {text-decoration: none; }
 #main-navbar div span:nth-child(1) a {background: #000; color: #fff;}
@@ -123,11 +123,13 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 /* Media queries */
 @media screen and (min-width: 768px) {
+	#header #vex-dex-headers {display: initial !important;}
 	#header #vex-dex-headers a.flag-link {filter: grayscale(1); -webkit-filter: grayscale(1);}
 	#header #vex-dex-headers a.flag-link:hover {filter: grayscale(0); -webkit-filter: grayscale(0);}
 
-	.animate-flip { animation-name: flip; animation-duration: .25s;}
+	#main-navbar { left: initial !important;}
 
+	.animate-flip { animation-name: flip; animation-duration: .25s;}
 }
 
 @keyframes flip {
