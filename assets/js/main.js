@@ -1,11 +1,17 @@
 $(document).ready(function() {
+	$("#right-footer-desktop-rotated").css({
+		"height": $("#right-footer-desktop").css("width"),
+		"width": $("#content").css("height")
+	});
+
 	$("#mobile-menu-icon").click(function(e) {
 		e.preventDefault();
-		if ($("#main-navbar").css("left") == "0px") {
-			closeNavbar();
-		} else {
-			openNavbar();
-		}
+		openNavbar();
+	});
+
+	$("#close-navbar").click(function(e) {
+		e.preventDefault();
+		closeNavbar();
 	});
 
 	$("#vex-dex-headers-show").click(function(e) {
@@ -22,6 +28,10 @@ $(document).ready(function() {
 		closeNavbar();
 	});
 
+	$("#content-cover").on({'touchstart': function() {
+		closeNavbar();
+	}});
+
 	$("#main-navbar span").hover(function() {
 		$(this).children().addClass("animate-flip");
 	});
@@ -29,24 +39,17 @@ $(document).ready(function() {
 	$("#main-navbar span").mouseleave(function() {
 		$(this).children().removeClass("animate-flip");
 	});
-
-
-
 });
 
 function closeNavbar() {
 	$("#content-cover").hide();
 	$("#main-navbar").animate({
-		left: "calc(-240px - 2%)"
-
-	}, 500, function() {
-		$("#main-navbar").hide();
-	});
+		left: "-240px"
+	}, 500);
 }
 
 function openNavbar() {
 	$("#content-cover").show();
-	$("#main-navbar").show();
 	$("#main-navbar").animate({
 		left: "0px"
 	}, 500);
