@@ -1,24 +1,24 @@
 <?php
-class Video_model extends CI_Model {
+class Sheet_model extends CI_Model {
 
 	public function __construct()
 	{
 		$this->load->database();
 	}
 
-	public function get_videos($slug = FALSE)
+	public function get_sheets($slug = FALSE)
 	{
 		if ($slug === FALSE)
 		{
-			$query = $this->db->get('videos');
+			$query = $this->db->get('sheets');
 			return $query->result_array();
 		}
 
-		$query = $this->db->get_where('videos', array('slug' => $slug));
+		$query = $this->db->get_where('sheets', array('slug' => $slug));
 		return $query->row_array();
 	}
 
-	public function set_video()
+	public function set_sheet()
 	{
 		$slug = url_title($this->input->post('title'), 'dash', TRUE);
 
@@ -29,17 +29,17 @@ class Video_model extends CI_Model {
 			'text' => $this->input->post('text')
 		);
 
-		return $this->db->insert('videos', $data);
+		return $this->db->insert('sheets', $data);
 	}
 
-	public function delete_video($slug = FALSE)
+	public function delete_sheet($slug = FALSE)
 	{
 		if ($slug !== FALSE) {
-			$this->db->delete('videos', array('slug' => $slug));
+			$this->db->delete('sheets', array('slug' => $slug));
 		}
 	}
 
-	public function update_video($slug = FALSE)
+	public function update_sheet($slug = FALSE)
 	{
 		$new_slug = url_title($this->input->post('title'), 'dash', TRUE);
 
@@ -50,6 +50,6 @@ class Video_model extends CI_Model {
 			'text' => $this->input->post('text')
 		);
 
-		return $this->db->update('videos', $data, array('slug' => $slug));
+		return $this->db->update('sheets', $data, array('slug' => $slug));
 	}
 }

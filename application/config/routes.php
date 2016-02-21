@@ -49,12 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['admin/delete_video/(:any)'] = 'admin/delete_video/$1';
-$route['admin/edit_video/(:any)'] = 'admin/edit_video/$1';
+$route['admin/delete_sheet/(:any)'] = 'admin/delete_sheet/$1';
+$route['admin/edit_sheet/(:any)'] = 'admin/edit_sheet/$1';
 $route['admin/(:any)'] = 'admin/$1';
 $route['admin'] = 'admin/home';
 $route['vex/review'] = 'vex/review';
 $route['vex/(:any)'] = 'vex/view/$1';
 $route['vex'] = 'vex/view/home';
+$route['sheets/(:any)'] = 'sheets/view/$1';
+$route['sheets'] = 'sheets';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';

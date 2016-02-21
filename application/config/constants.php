@@ -95,3 +95,6 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 */
 define('ADMIN_COOKIE_NAME', 'manage_videos');
 define('ADMIN_PASSWORD', 'password');
+define('DATABASE_NAME', 'acriktya_sixsided_sheets');
+define('DATABASE_USERNAME', 'acriktya_admin');
+define('DATABASE_PASSWORD', '#nTCL#4f[.nI');
