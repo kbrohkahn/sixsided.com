@@ -1,5 +1,5 @@
 html {background: #efefef;}
-body {overflow-x: hidden; background-color: transparent;}
+body {overflow-x: hidden; background-color: transparent; max-width: 1200px; margin: 0 auto; min-width: 300px;}
 div, ul, li, a {box-sizing: border-box;}
 img {max-width: 100%;}
 #container {max-width: 1200px;}
@@ -80,7 +80,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 #header a i {float: left; padding: 18px 9px;}
 #header a.flag-link {display: inline-block; text-align: center; margin-top: 14px;}
 #header a.flag-link:hover {text-decoration: none;}
-#header > div > a.flag-link {float: right; margin-left: 15px; margin-right: 15px;}
+#header > div > a.flag-link {float: right; margin-right: 15px;}
 
 #header #vex-dex-headers a.flag-link {color: #f00;}
 
@@ -106,15 +106,14 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 #bottom-footer {margin-top: 15px; margin-bottom: 15px;}
 #bottom-footer .footer-div {font-weight: bold; font-style: italic;}
-#bottom-footer .footer-state { color: #0f0;}
-#bottom-footer .footer-type { color: #f70;}
+#bottom-footer .footer-div .footer-type { color: #f70;}
+#bottom-footer .footer-div .footer-state { color: #008c00;}
 #bottom-footer .company {font-size: 2.4em; text-align: right;}
 
 /* Vex pages */
 #vex-table {}
 #vex-table td {padding: 15px 0;}
-#vex-table img {margin-right: 15px;}
-#vex-table div:nth-child(2) {font-weight: bold;}
+#vex-table td:nth-child(2) {padding-left: 15px;}
 
 .vex-content {display: table; margin-bottom: 15px;}
 .vex-content > div {display: table-cell; vertical-align: middle;}
@@ -161,7 +160,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 	#bottom-footer {margin-top: 25px; border-top: solix 1px #efefef;}
 	#bottom-footer .company {text-align: center; margin: 25px 0; font-size: 2em;}
-	#bottom-footer .footer-div {width: 50%; text-align: center; margin-right: 0;}
+	#bottom-footer .footer-div {text-align: center;}
 
 	#right-footer-desktop {display: none;}
 	#right-footer-mobile {display: initial;}

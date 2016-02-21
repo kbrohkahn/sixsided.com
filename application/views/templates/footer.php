@@ -5,17 +5,9 @@
 			</div>
 		</div>
 		<div class="row" id="bottom-footer">
-			<div class="col-sm-4">
-				<div class="row">
-					<div class="col-xs-6 footer-div">
-						<div class="footer-type">Vexillologist</div>
-						<div>1/1</div>
-					</div>
-					<div class="col-xs-6 footer-div">
-						<div class="footer-state">Maryland</div>
-						<div>United States</div>
-					</div>
-				</div>
+			<div class="col-sm-4 footer-div">
+				<div class="footer-type">Vexillologist</div>
+				<div class="footer-state">Baltimore, MD</div>
 			</div>
 			<div class="col-sm-8">
 				<div class="company">

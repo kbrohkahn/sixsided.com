@@ -23,13 +23,18 @@
 				<a class="title" href="/">
 					<div class="logo" alt="Your logo"></div>
 				</a>
-				<a class="mobile-only flag-link" id="vex-dex-headers-show" href="#vex-dex-headers">
-					<img src="/assets/img/ButtonV1o.gif">
-					<div>VEX DEX</div>
+				
+				<a class="flag-link" href="mailto:vex@sixsided.com">
+						<img src="/assets/img/email.gif">
+					<div>Email</div>
 				</a>
 				<a class="flag-link" id="flag-resources" href="/resources">
 						<img src="/assets/img/Resources.gif">
 					<div>Resources</div>
+				</a>
+				<a class="mobile-only flag-link" id="vex-dex-headers-show" href="#vex-dex-headers">
+					<img src="/assets/img/ButtonV1o.gif">
+					<div>VEX DEX</div>
 				</a>
 				<div id="vex-dex-headers">
 					<a class="flag-link" href="/vex/vex1">
