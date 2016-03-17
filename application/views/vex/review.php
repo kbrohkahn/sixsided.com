@@ -94,10 +94,10 @@
 			<td></td>
 			<td></td>
 			<td>Subtotal</td>
-			<td class="price"><?php echo $complete_deck_total*40 + $individual_deck_total * $individual_deck_price ?></td>
+			<td class="price"><?php echo $subtotal?></td>
 		</tr>
 		<tr>
-			<td></td>
+			<td><?php if ($tax > 0) {echo 'Maryland has 5% sales tax';}?></td>
 			<td></td>
 			<td>Tax</td>
 			<td class="price"><?php echo $tax ?></td>
@@ -112,7 +112,7 @@
 			<td></td>
 			<td></td>
 			<td><b>Total Order</b></td>
-			<td class="price"><?php echo $complete_deck_total*40 + $individual_deck_total * $individual_deck_price + $tax + $shipping ?></td>
+			<td class="price"><?php echo $subtotal + $tax + $shipping ?></td>
 		</tr>
 	</tbody>
 </table>
@@ -121,7 +121,6 @@
 	<div class="col-sm-6 col-sm-offset-6">
 		<h4 class='text-right'>Shipping info</h4>
 		<table class="table">
-			
 			<tr>
 				<td>Country</td>
 				<td><?php echo $country ?></td>

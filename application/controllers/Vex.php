@@ -23,7 +23,6 @@ class Vex extends CI_Controller {
 		$data['state'] = $this->input->post('state');
 		$data['other_country'] = $this->input->post('other-country');
 		$data['other_country_mail'] = $this->input->post('other-country-mail');
-	
 
 		$data['individual_deck_1'] = $this->input->post('individual-deck-1');
 		$data['individual_deck_2'] = $this->input->post('individual-deck-2');
@@ -59,9 +58,27 @@ class Vex extends CI_Controller {
 			$data['complete_deck_4'] +
 			$data['complete_deck_5'];
 
+		$data['subtotal'] = $data['complete_deck_total'] * 40 + $data['individual_deck_total'] * $data['individual_deck_price'];
 
-		$data['tax'] = 0.00 * ($data['complete_deck_total'] * 40 + $data['individual_deck_total'] * $data['individual_deck_price']);
-		$data['shipping'] = 20;
+		// calculate tax (only in Maryland)
+		if ($data['state'] == 'MD') {
+			$data['tax'] = .05 * $data['subtotal'];
+		} else {
+			$data['tax'] = 0;
+		}
+
+		// calculate shipping cost
+		if ($data['country'] == 'United States') {
+			$data['shipping'] = .10 * $data['subtotal'];
+		} else if ($data['country'] == 'Canada') {
+			$data['shipping'] = .15 * $data['subtotal'];
+		} else {
+			if ($data['other_country_mail'] == 'surface-mail') {
+				$data['shipping'] = .20 * $data['subtotal'];
+			} else {
+				$data['shipping'] = .40 * $data['subtotal'];
+			}
+		}
 
 		$this->load->view('templates/header');
 		$this->load->view('vex/review', $data);

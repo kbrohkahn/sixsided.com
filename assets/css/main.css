@@ -91,7 +91,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 #header a.flag-link {}
 
 /* Main content */
-#content {padding: 15px; border: solid 1px #7f7f7f;}
+#content {padding: 15px; border: solid 1px #7f7f7f; min-height: 504px;}
 .page-header {display: table; width: 100%;}
 .page-header img,
 .page-header h1 {display: table-cell; vertical-align: middle;}
