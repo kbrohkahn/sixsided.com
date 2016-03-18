@@ -1,29 +1,29 @@
 <h1><?php echo $title; ?></h1>
 
-<p><a class="btn btn-primary" href="/admin/create_video">Create a video item</a></p>
+<p><a class="btn btn-primary" href="/admin/create_sheet">Create a sheet item</a></p>
 
 <table class="table-striped full-width">
 	<thead>
 		<tr>
-			<th>Title</th>
-			<!-- <th>Link</th> -->
-			<th></th>
+			<th>Name</th>
+			<th>Era</th>
+			<th>Cost</th>
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach ($videos as $video_item): ?>
+		<?php foreach ($sheets as $sheet_item): ?>
 			<tr>
-				<td><?php echo $video_item['title']; ?></td>
-				<!-- <td><a href="<?php echo $video_item['link']; ?>"><?php echo $video_item['link'];?></a></td> -->
+				<td><?php echo $sheet_item['title']; ?></td>
+				<!-- <td><a href="<?php echo $sheet_item['link']; ?>"><?php echo $sheet_item['link'];?></a></td> -->
 				<td class="right">
-					<a class="btn btn-default" href="<?php echo site_url('videos/'.$video_item['slug']); ?>">
+					<a class="btn btn-default" href="<?php echo site_url('sheets/'.$sheet_item['slug']); ?>">
 						View
 					</a>
 
-					<a class="btn btn-default" href='/admin/edit_video/<?php echo $video_item['slug']; ?>'>
+					<a class="btn btn-default" href='/admin/edit_sheet/<?php echo $sheet_item['slug']; ?>'>
 						Edit
 					</a>
-					<a class="btn btn-danger" href='/admin/delete_video/<?php echo $video_item['slug']; ?>'>
+					<a class="btn btn-danger" href='/admin/delete_sheet/<?php echo $sheet_item['slug']; ?>'>
 						Delete
 					</a>
 				</td>

@@ -4,7 +4,7 @@ class Admin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('video_model');
+		$this->load->model('sheet_model');
 	}
 
 	public function checkCookie() {
@@ -36,22 +36,22 @@ class Admin extends CI_Controller {
 	{
 		$this->checkCookie();
 
-		$data['videos'] = $this->video_model->get_videos();
-		$data['title'] = 'Manage uploaded videos';
+		$data['sheets'] = $this->sheet_model->get_sheets();
+		$data['title'] = 'Manage uploaded sheets';
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('admin/home', $data);
 		$this->load->view('templates/footer');
 	}
 
-	public function create_video()
+	public function create_sheet()
 	{
 		$this->checkCookie();
 
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Create a video item';
+		$data['title'] = 'Create a sheet item';
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('link', 'Link', 'required');
@@ -60,37 +60,37 @@ class Admin extends CI_Controller {
 		if ($this->form_validation->run() === FALSE)
 		{
 			$this->load->view('templates/header');
-			$this->load->view('admin/create_video', $data);
+			$this->load->view('admin/create_sheet', $data);
 			$this->load->view('templates/footer');
 		}
 		else
 		{
-			$this->video_model->set_video();
+			$this->sheet_model->set_sheet();
 			header("Location: ".site_url("/admin"));
 			exit();
 		}
 	}
 
-	public function delete_video($slug = FALSE)
+	public function delete_sheet($slug = FALSE)
 	{
 		$this->checkCookie();
 
-		$this->video_model->delete_video($slug);
+		$this->sheet_model->delete_sheet($slug);
 
 		header("Location: ".site_url("/admin"));
 		exit();
 	}
 
-	public function edit_video($slug = FALSE)
+	public function edit_sheet($slug = FALSE)
 	{
 		$this->checkCookie();
 
-		$data['video_item'] = $this->video_model->get_videos($slug);
+		$data['sheet_item'] = $this->sheet_model->get_sheets($slug);
 
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$data['title'] = 'Edit video item';
+		$data['title'] = 'Edit sheet item';
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('link', 'Link', 'required');
@@ -99,12 +99,12 @@ class Admin extends CI_Controller {
 		if ($this->form_validation->run() === FALSE)
 		{
 			$this->load->view('templates/header');
-			$this->load->view('admin/edit_video', $data);
+			$this->load->view('admin/edit_sheet', $data);
 			$this->load->view('templates/footer');
 		}
 		else
 		{
-			$this->video_model->update_video($slug);
+			$this->sheet_model->update_sheet($slug);
 			
 			header("Location: ".site_url("/admin"));
 			exit();

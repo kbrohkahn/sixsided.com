@@ -4,19 +4,19 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('admin/create_video'); ?>
+<?php echo form_open('admin/create_sheet'); ?>
 	<div class="form-group">
 		<label for="title">Title</label>
 		<input type="text" class="form-control" name="title" required placeholder="Video title">
 	</div>
 	<div class="form-group">
 		<label for="link">Link</label>
-		<input type="text" class="form-control" name="link" required placeholder="https://player.vimeo.com/video/9153533">
+		<input type="text" class="form-control" name="link" required placeholder="https://player.vimeo.com/sheet/9153533">
 	</div>
 	<div class="form-group">
 		<label for="text">Summary</label>
-		<textarea type="text" class="form-control" name="text" required placeholder="Enter summary for video"></textarea>
+		<textarea type="text" class="form-control" name="text" required placeholder="Enter summary for sheet"></textarea>
 	</div>
 
-	<button type="submit" name="submit" value="Create a video item" class="btn btn-primary">Submit</button>
+	<button type="submit" name="submit" value="Create a sheet item" class="btn btn-primary">Submit</button>
 </form>
