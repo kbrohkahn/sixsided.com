@@ -10,16 +10,14 @@
 	<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/assets/css/main.css" rel="stylesheet">
-	<script src="/assets/js/jquery-2.1.4.min.js" type="text/javascript"></script>
-	<script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="/assets/js/main.js" type="text/javascript"></script>
+	<script data-main="/assets/js/main.js" src="/assets/js/require.js" type="text/javascript" async></script>
 </head>
 <body>
 	<div class="container-fluid" id="container">
 
 		<div id="header" class="row">
 			<div class="col-xs-12">
-				<a href="#main-navbar" class="mobile-only" id="mobile-menu-icon"><i class="fa fa-bars fa-2x"></i></a>
+				<a class="mobile-only" href="#main-navbar" onclick="openNavbar();"><i class="fa fa-bars fa-2x"></i></a>
 				<a class="title" href="/">
 					<div class="logo" alt="Your logo"></div>
 				</a>
@@ -32,7 +30,7 @@
 						<img src="/assets/img/Resources.gif">
 					<div>Resources</div>
 				</a>
-				<a class="mobile-only flag-link" id="vex-dex-headers-show" href="#vex-dex-headers">
+				<a class="mobile-only flag-link" href="#vex-dex-headers" onclick="toggleVexDexHeaders()">
 					<img src="/assets/img/ButtonV1o.gif">
 					<div>VEX DEX</div>
 				</a>
@@ -61,9 +59,9 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row" id="content-container">
 			<div class="col-sm-3" id="main-navbar">
-				<span class="mobile-only"><a href="#" id="close-navbar">Close Menu</a></span>
+				<span class="mobile-only"><a href="#" onclick="closeNavbar();">Close Menu</a></span>
 				<div>
 					<span><?php echo anchor('/vex/', 'VEX');?></span>
 					<span><?php echo anchor('/vex/purchase', 'Buy VEX');?></span>

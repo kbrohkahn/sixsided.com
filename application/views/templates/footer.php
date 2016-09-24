@@ -1,7 +1,13 @@
 			</div>
 
 			<div class="col-sm-2" id="right-footer-desktop">
+				<table>
+				<tr>
+				<td>
 				<img src="/assets/img/right-footer.png">
+				</td>
+				</tr>
+				</table>
 			</div>
 		</div>
 		<div class="row" id="bottom-footer">
@@ -25,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="content-cover"></div>		
+		<div id="content-cover" onclick="closeNavbar()" ondrag="closeNavbar()"></div>		
 	</div>
 </body>
 </html>

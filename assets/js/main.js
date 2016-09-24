@@ -1,42 +1,15 @@
-$(document).ready(function() {
-	$("#right-footer-desktop").css("height", $("#content").css("height"));	
 
-	$("#mobile-menu-icon").click(function(e) {
-		e.preventDefault();
-		openNavbar();
-	});
+requirejs(["jquery-2.1.4.min"], function ($) {});
 
-	$("#close-navbar").click(function(e) {
-		e.preventDefault();
-		closeNavbar();
-	});
+requirejs(["bootstrap.min"], function (bootstrap) {});
 
-	$("#vex-dex-headers-show").click(function(e) {
-		e.preventDefault();
-		if ($("#vex-dex-headers").css("display") == "none") {
-			$("#vex-dex-headers").show(500);
-		} else {
-			$("#vex-dex-headers").hide(500);
-
-		}
-	});
-
-	$("#content-cover").click(function() {
-		closeNavbar();
-	});
-
-	$("#content-cover").on({'touchstart': function() {
-		closeNavbar();
-	}});
-
-	$("#main-navbar span").hover(function() {
-		$(this).children().addClass("animate-flip");
-	});
-
-	$("#main-navbar span").mouseleave(function() {
-		$(this).children().removeClass("animate-flip");
+requirejs(["braintree-2.29.0.min"], function (braintree) {
+	braintree.setup('', 'dropin', {
+		container: ''
 	});
 });
+
+
 
 function closeNavbar() {
 	$("#content-cover").hide();
@@ -50,4 +23,12 @@ function openNavbar() {
 	$("#main-navbar").animate({
 		left: "0px"
 	}, 500);
+}
+
+function toggleVexDexHeaders() {
+	if ($("#vex-dex-headers").css("display") == "none") {
+		$("#vex-dex-headers").show(500);
+	} else {
+		$("#vex-dex-headers").hide(500);
+	}
 }

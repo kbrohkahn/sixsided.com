@@ -1,3 +1,4 @@
+html, body {height: 100%;}
 html {background: #efefef;}
 body {overflow-x: hidden; background-color: transparent; max-width: 1200px; margin: 0 auto; min-width: 300px;}
 div, ul, li, a {box-sizing: border-box;}
@@ -91,6 +92,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 #header a.flag-link {}
 
 /* Main content */
+#content-container {position: relative;}
 #content {padding: 15px; border: solid 1px #7f7f7f; min-height: 504px;}
 .page-header {display: table; width: 100%;}
 .page-header img,
@@ -99,7 +101,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 /* Footer */
 #right-footer-mobile {display: none;}
-#right-footer-desktop {display: initial;}
+#right-footer-desktop {display: initial; position: absolute; top: 0; bottom: 0;}
 #right-footer-mobile,
 #right-footer-desktop {text-align: center;}
 #right-footer-desktop img {position: absolute; top: 50%; margin-top: -252px; left: 50%; margin-left: -25px;}
@@ -128,7 +130,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 	#main-navbar { left: initial !important;}
 
-	.animate-flip { animation-name: flip; animation-duration: .25s;}
+	/*.animate-flip { animation-name: flip; animation-duration: .25s;}*/
 }
 
 @keyframes flip {
