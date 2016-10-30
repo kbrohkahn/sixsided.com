@@ -93,8 +93,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 | Constants used throughout the application
 |
 */
-define('ADMIN_COOKIE_NAME', 'manage_videos');
-define('ADMIN_PASSWORD', 'password');
-define('DATABASE_NAME', 'acriktya_sixsided_sheets');
-define('DATABASE_USERNAME', 'acriktya_admin');
-define('DATABASE_PASSWORD', '#nTCL#4f[.nI');
+define('ADMIN_COOKIE_NAME', 'manage_sheets_admin');
+define('ADMIN_PASSWORD', 'Golden12');
+define('DATABASE_NAME', 'six_sided');
+define('DATABASE_USERNAME', 'six_sided_admin');
+define('DATABASE_PASSWORD', '#28cj2509');
+define('EMAIL', 'vex@sixsided.com');

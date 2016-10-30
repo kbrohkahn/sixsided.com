@@ -22,7 +22,7 @@
 					<div class="logo" alt="Your logo"></div>
 				</a>
 				
-				<a class="flag-link" href="mailto:vex@sixsided.com">
+				<a class="flag-link" href="mailto:<?php echo EMAIL?> ">
 						<img src="/assets/img/email.gif">
 					<div>Email</div>
 				</a>
@@ -63,14 +63,14 @@
 			<div class="col-sm-3" id="main-navbar">
 				<span class="mobile-only"><a href="#" onclick="closeNavbar();">Close Menu</a></span>
 				<div>
-					<span><?php echo anchor('/vex/', 'VEX');?></span>
-					<span><?php echo anchor('/vex/purchase', 'Buy VEX');?></span>
-					<span><?php echo anchor('/vex/about', 'About VEX');?></span>
-					<span><?php echo anchor('/vex/designer_notes', 'Designer Notes');?></span>
-					<span><?php echo anchor('/vex/challenges', 'VEX Challenges');?></span>
-					<span><?php echo anchor('/sheets/', 'Flag Sheets');?></span>
-					<span><?php echo anchor('/sheets/about', 'About Flag Sheets');?></span>
-					<span><?php echo anchor('/sheets/purchase', 'Purchase Flag Sheets');?></span>
+					<span><?php echo anchor('vex/', 'VEX');?></span>
+					<span><?php echo anchor('vex/purchase', 'Buy VEX');?></span>
+					<span><?php echo anchor('vex/about', 'About VEX');?></span>
+					<span><?php echo anchor('vex/designer_notes', 'Designer Notes');?></span>
+					<span><?php echo anchor('vex/challenges', 'VEX Challenges');?></span>
+					<span><?php echo anchor('sheets/', 'Flag Sheets');?></span>
+					<span><?php echo anchor('sheets/about', 'About Flag Sheets');?></span>
+					<span><?php echo anchor('sheets/purchase', 'Purchase Flag Sheets');?></span>
 				</div>
 			</div>
 			<div class="col-sm-7" id="content">

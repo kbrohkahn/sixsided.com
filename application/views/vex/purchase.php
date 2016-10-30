@@ -1,6 +1,6 @@
 <h1><?php echo $title; ?></h1>
 
-<form class="form" action="http://daniel.broh-kahn.com/vex/review" method="post" accept-charset="utf-8">
+<form class="form" action="/vex/review" method="post" accept-charset="utf-8">
 	<h4>Individual decks</h4>
 
 	<em>Pricing</em>
@@ -486,5 +486,5 @@
 	</div>
 </form>
 
-<script src="/assets/js/purchase.js" type="text/javascript"></script>
+<!-- <script src="/assets/js/purchase.js" type="text/javascript"></script> -->
 <link href="/assets/css/purchase.css" rel="stylesheet">

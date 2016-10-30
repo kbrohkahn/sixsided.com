@@ -65,7 +65,7 @@ class Admin extends CI_Controller {
 		}
 		else
 		{
-			$this->sheet_model->set_sheet();
+			$this->sheet_model->add_sheet();
 			header("Location: ".site_url("/admin"));
 			exit();
 		}
