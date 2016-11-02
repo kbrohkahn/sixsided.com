@@ -1,6 +1,11 @@
 <h1><?php echo $title; ?></h1>
 
-<p><a class="btn btn-primary" href="/admin/create_sheet">Create a sheet item</a></p>
+<p>
+	<a class="btn btn-primary" href="/admin/create_sheet">Create a sheet item</a>
+	<a class="btn btn-danger" href="/admin/recreate_database">Recreate database</a>
+</p>
+
+<br>
 
 <table class="table-striped full-width">
 	<thead>
@@ -13,7 +18,7 @@
 	<tbody>
 		<?php foreach ($sheets as $sheet_item): ?>
 			<tr>
-				<td><?php echo $sheet_item['title']; ?></td>
+				<td><?php echo $sheet_item['name']; ?></td>
 				<!-- <td><a href="<?php echo $sheet_item['link']; ?>"><?php echo $sheet_item['link'];?></a></td> -->
 				<td class="right">
 					<a class="btn btn-default" href="<?php echo site_url('sheets/'.$sheet_item['slug']); ?>">

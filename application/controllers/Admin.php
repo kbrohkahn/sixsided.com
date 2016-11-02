@@ -110,4 +110,11 @@ class Admin extends CI_Controller {
 			exit();
 		}
 	}
+
+	public function recreate_database()
+	{
+		$this->checkCookie();
+
+		$this->sheet_model->recreate_database();
+	}
 }
