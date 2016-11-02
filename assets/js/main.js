@@ -22,6 +22,8 @@ requirejs(["jquery", "braintree"], function ($, braintree) {
 	});
 });
 
+requirejs(["sorttable"], function () {});
+
 requirejs(["bootstrap"], function () {});
 
 function closeNavbar() {
@@ -44,4 +46,10 @@ function toggleVexDexHeaders() {
 	} else {
 		$("#vex-dex-headers").hide(500);
 	}
+}
+
+function searchSelectChanged() {
+	$(".sheet-type-select").hide();
+	var value = $("#sheet-era-select").val();
+	$("#" + value).show();
 }

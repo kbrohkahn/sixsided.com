@@ -9,12 +9,7 @@ class Sheets extends CI_Controller {
 
 	public function index()
 	{
-		$data['sheets'] = $this->sheet_model->get_sheets();
-		$data['title'] = 'Flag Sheet Archive';
-
-		$this->load->view('templates/header', $data);
-		$this->load->view('sheets/index', $data);
-		$this->load->view('templates/footer');
+		$this->search();
 	}
 
 	public function view($id = FALSE)
@@ -44,23 +39,32 @@ class Sheets extends CI_Controller {
 
 	public function search($era = '', $type = '', $scale = '')
 	{
+		if ($era == '' && $type == '' && $scale == '') {
+			$data['title'] = 'Flag Sheet Archive';
+		} else {
+			$data['title'] = 'Flag Sheet Search Results';
+		}
+
 		# get all eras
 		$eras = $this->sheet_model->get_eras();
 		
 		# lopp through all eras and get list of associated types
-		foreach ($eras as $era) {
-			$eraNameKey = str_replace($era['name'], ' ', '-')."-types";
-			$eras['eraNameKey'] = $eraNameKey;
-					
-			$data[$eraNameKey] = $this->sheet_model->get_types($era['name']);
+		$data['eraNameKeys'] = array();
+		foreach ($eras as &$era) {
+			$eraNameKey = str_replace(' ', '-', $era['era'])."-types";
+			
+			$era['eraNameKey'] = $eraNameKey;
+			$era['types'] = $this->sheet_model->get_types($era['era']);
+
+			array_push($data['eraNameKeys'], $eraNameKey);
 		}
 
 		$data['eras'] = $eras;
-		$data['eraNameKeys'] = $eraNameKeys;
 		$data['scales'] = $this->sheet_model->get_scales();
+		$data['sheets'] = $this->sheet_model->get_sheets();
 
 		$this->load->view('templates/header');
-		$this->load->view('sheets/search', $data);
+		$this->load->view('sheets/index', $data);
 		$this->load->view('templates/footer');
 	}
 }

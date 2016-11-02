@@ -26,7 +26,7 @@ class Sheet_model extends CI_Model {
 	public function get_sheets($era = '', $type = '', $scale = '')
 	{
 		$this->db
-			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type"')
+			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year"')
 			->from('sheets s')
 			->join('sheet_types st', 's.id = st.sheet_id')
 			->join('types t', 'st.type_id = t.id')
@@ -44,6 +44,8 @@ class Sheet_model extends CI_Model {
 			$this->db->where('sheet.scale', $scale);
 		}
 
+		$this->db->order_by('year asc, era asc, type asc');
+
 		return $this->db->get()->result_array();
 	}
 
@@ -51,7 +53,8 @@ class Sheet_model extends CI_Model {
 	{
 		$this->db
 			->select('scale')
-			->from('scales');
+			->from('scales')
+			->order_by('scale asc');
 		return $this->db->get()->result_array();		
 	}
 
@@ -59,7 +62,8 @@ class Sheet_model extends CI_Model {
 	{
 		$this->db
 			->select('name as "era"')
-			->from('eras');
+			->from('eras')
+			->order_by('name asc');
 		return $this->db->get()->result_array();
 	}
 
@@ -68,7 +72,8 @@ class Sheet_model extends CI_Model {
 		$this->db
 			->select('era.name as "era", type.name as "type"')
 			->from('types type')
-			->join('eras era', 'type.era = era.id');
+			->join('eras era', 'type.era = era.id')
+			->order_by('era asc, type asc');
 
 		if ($era !== '') {
 			$this->db->where('era.name', $era);
