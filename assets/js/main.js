@@ -51,5 +51,9 @@ function toggleVexDexHeaders() {
 function searchSelectChanged() {
 	$(".sheet-type-select").hide();
 	var value = $("#sheet-era-select").val();
-	$("#" + value).show();
+	if (value == "") {
+		$("#default-type-select").show();
+	} else {
+		$("#" + value).show();
+	}
 }

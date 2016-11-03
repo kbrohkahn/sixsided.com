@@ -8,40 +8,47 @@ class Sheet_model extends CI_Model {
 
 	public function get_sheet($id = FALSE)
 	{
-		if ($id === FALSE)
+		if ($id == FALSE)
 		{
 			return get_sheets();
 		} else {
 			$this->db
-				->select('sheet.id, sheet.scale, sheet.name, type.name as "type", era.name as "era"')
-				->from('sheets sheet')
-				->join('types type', 'sheet.type = type.id')
-				->join('eras era', 'type.era = era.id')
-				->where('sheet.id', $id);
+				->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year", sc.scale as "scale"')
+				->from('sheets s')
+				->join('sheet_types st', 's.id = st.sheet_id')
+				->join('types t', 'st.type_id = t.id')
+				->join('eras e', 't.era = e.id')
+				->join('scales sc', 's.scale = sc.id')
+				->where('s.id', $id);
 			return $this->db->get()->row_array();
 		}
 
 	}
 
-	public function get_sheets($era = '', $type = '', $scale = '')
+	public function get_sheets($era = '', $type = '', $scale = '', $year = '')
 	{
 		$this->db
-			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year"')
+			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year", sc.scale as "scale"')
 			->from('sheets s')
 			->join('sheet_types st', 's.id = st.sheet_id')
 			->join('types t', 'st.type_id = t.id')
-			->join('eras e', 't.era = e.id');
+			->join('eras e', 't.era = e.id')
+			->join('scales sc', 's.scale = sc.id');
 
 		if ($era !== '') {
-			$this->db->where('era.name', $era);
+			$this->db->where('e.name', $era);
 		}
 
 		if ($type !== '') {
-			$this->db->where('type.name', $type);
+			$this->db->where('t.name', $type);
 		}
 
 		if ($type !== '') {
-			$this->db->where('sheet.scale', $scale);
+			$this->db->where('s.scale', $scale);
+		}
+
+		if ($year !== '') {
+			$this->db->where('t.year', $year);
 		}
 
 		$this->db->order_by('year asc, era asc, type asc');
@@ -64,6 +71,16 @@ class Sheet_model extends CI_Model {
 			->select('name as "era"')
 			->from('eras')
 			->order_by('name asc');
+		return $this->db->get()->result_array();
+	}
+
+	public function get_years()
+	{
+		$this->db
+			->select('year')
+			->distinct()
+			->from('types')
+			->order_by('year asc');
 		return $this->db->get()->result_array();
 	}
 

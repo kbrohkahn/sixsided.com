@@ -37,9 +37,9 @@ class Sheets extends CI_Controller {
 		}
 	}
 
-	public function search($era = '', $type = '', $scale = '')
+	public function search($era = '', $type = '', $scale = '', $year = '')
 	{
-		if ($era == '' && $type == '' && $scale == '') {
+		if ($era == '' && $type == '' && $scale == '' && $year == '') {
 			$data['title'] = 'Flag Sheet Archive';
 		} else {
 			$data['title'] = 'Flag Sheet Search Results';
@@ -51,8 +51,15 @@ class Sheets extends CI_Controller {
 		# lopp through all eras and get list of associated types
 		$data['eraNameKeys'] = array();
 		foreach ($eras as &$era) {
-			$eraNameKey = str_replace(' ', '-', $era['era'])."-types";
-			
+			$eraNameKey = $era['era'];
+			$eraNameKey = str_replace(' ', '', $eraNameKey);
+			$eraNameKey = str_replace(',', '', $eraNameKey);
+			$eraNameKey = str_replace('.', '', $eraNameKey);
+			$eraNameKey = str_replace('(', '', $eraNameKey);
+			$eraNameKey = str_replace(')', '', $eraNameKey);
+			$eraNameKey = str_replace('-', '', $eraNameKey);
+			$eraNameKey = $eraNameKey."-types";
+
 			$era['eraNameKey'] = $eraNameKey;
 			$era['types'] = $this->sheet_model->get_types($era['era']);
 
@@ -60,6 +67,7 @@ class Sheets extends CI_Controller {
 		}
 
 		$data['eras'] = $eras;
+		$data['years'] = $this->sheet_model->get_years();
 		$data['scales'] = $this->sheet_model->get_scales();
 		$data['sheets'] = $this->sheet_model->get_sheets();
 
