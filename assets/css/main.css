@@ -1,9 +1,8 @@
 html, body {height: 100%;}
-html {background: #efefef;}
+html {background: url("/assets/img/background.png");}
 body {overflow-x: hidden; background-color: transparent; max-width: 1200px; margin: 0 auto; min-width: 300px;}
 div, ul, li, a {box-sizing: border-box;}
 img {max-width: 100%;}
-#container {max-width: 1200px;}
 
 /* Various */
 .large-margin-top {margin-top: 75px;}
@@ -62,20 +61,25 @@ p {line-height: 1.4em; margin-bottom: 1em}
 .breadcrumb {background-color: transparent;}
 
 /* All Content */
-#container {border: solid 2px black; border-radius: 15px; margin: 2%; background: white;box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);}
+#container {border: solid 2px black; border-radius: 15px; margin: 2%; max-width: 1200px; background-color: rgba(255, 255, 255, .95); box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);}
 
 /* Header */
 #main-navbar {z-index: 12; }
-#main-navbar span a {display: block; padding: 15px 5px; border: solid black 1px; color: #000}
-#main-navbar span a:hover {text-decoration: none; }
-#main-navbar div span:nth-child(1) a {background: #000; color: #fff;}
-#main-navbar div span:nth-child(2) a {background: #fff;}
-#main-navbar div span:nth-child(3) a {background: #f00;}
-#main-navbar div span:nth-child(4) a {background: #f70;} {font-size: 2em;}
-#main-navbar div span:nth-child(5) a {background: #ff0;}
-#main-navbar div span:nth-child(6) a {background: #008c00; color: #fff;}
-#main-navbar div span:nth-child(7) a {background: #0000bd; color: #fff;}
-#main-navbar div span:nth-child(8) a {background: #63009c; color: #fff;}
+#main-navbar > a {display: block; border: solid black 1px; color: #000;}
+#main-navbar > a:not(:nth-child(2)) {border-top: none; }
+#main-navbar > span {font-weight: bold;}
+#main-navbar a:hover {text-decoration: none; }
+#main-navbar table td:first-child { height: 60px; width: 50px; text-align: center; }
+#main-navbar table td:last-child { padding-left: 15px; border-left: solid black 1px; }
+#main-navbar span i { text-align: center; vertical-align: middle; }
+#main-navbar a:nth-child(2) table td:first-child {background: #000000; color: #fff;}
+#main-navbar a:nth-child(3) table td:first-child {background: #fff;}
+#main-navbar a:nth-child(4) table td:first-child {background: #f00;}
+#main-navbar a:nth-child(5) table td:first-child {background: #f70;} {font-size: 2em;}
+#main-navbar a:nth-child(6) table td:first-child {background: #ff0;}
+#main-navbar a:nth-child(7) table td:first-child {background: #008c00; color: #fff;}
+#main-navbar a:nth-child(8) table td:first-child {background: #0000bd; color: #fff;}
+#main-navbar a:nth-child(9) table td:first-child {background: #63009c; color: #fff;}
 
 #header {z-index: 10;}
 #header a i {float: left; padding: 18px 9px;}

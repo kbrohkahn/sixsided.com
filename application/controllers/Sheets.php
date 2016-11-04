@@ -7,6 +7,13 @@ class Sheets extends CI_Controller {
 		$this->load->model('sheet_model');
 	}
 
+	public function about()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('sheets/about');
+		$this->load->view('templates/footer');
+	}
+
 	public function index()
 	{
 		$this->display_results();

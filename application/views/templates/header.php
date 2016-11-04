@@ -61,16 +61,78 @@
 
 		<div class="row" id="content-container">
 			<div class="col-sm-3" id="main-navbar">
-				<span class="mobile-only"><a href="#" onclick="closeNavbar();">Close Menu</a></span>
-				<div>
-					<span><?php echo anchor('vex/', 'VEX');?></span>
-					<span><?php echo anchor('vex/purchase', 'Buy VEX');?></span>
-					<span><?php echo anchor('vex/about', 'About VEX');?></span>
-					<span><?php echo anchor('vex/designer_notes', 'Designer Notes');?></span>
-					<span><?php echo anchor('vex/challenges', 'VEX Challenges');?></span>
-					<span><?php echo anchor('sheets/', 'Flag Sheets');?></span>
-					<span><?php echo anchor('sheets/about', 'About Flag Sheets');?></span>
-					<span><?php echo anchor('sheets/purchase', 'Purchase Flag Sheets');?></span>
-				</div>
+				<span class="mobile-only" href="#" onclick="closeNavbar();">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-close" aria-hidden="true"></i></td>
+							<td>Close Menu</td>
+						</tr>
+					</table>
+				</span>
+
+				<a href="/vex">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-id-card" aria-hidden="true"></i></td>
+							<td>VEX</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/vex/purchase">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>
+							<td>Buy VEX</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/vex/about">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-info" aria-hidden="true"></i></td>
+							<td>About VEX</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/vex/designer_notes">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-sticky-note" aria-hidden="true"></i></td>
+							<td>Designer Notes</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/vex/challenges">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-puzzle-piece" aria-hidden="true"></i></td>
+							<td>VEX Challenges</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/sheets">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-flag" aria-hidden="true"></i></td>
+							<td>Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/sheets/about">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-info" aria-hidden="true"></i></td>
+							<td>About Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/sheets/purchase">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>
+							<td>Purchase Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
 			</div>
 			<div class="col-sm-7" id="content">

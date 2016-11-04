@@ -10,7 +10,7 @@
 		<li>10 or more total decks: 8$ each</li>
 	</ul>
 
-	<table class="table">
+	<table class="table purchase-table ">
 		<thead>
 			<tr>
 				<td>Product</td>
@@ -60,7 +60,7 @@
 	</table>
 
 	<h4>Complete decks (all 200 cards)</h4>
-	<table class="table">
+	<table class="table purchase-table">
 		<thead>
 			<tr>
 				<td>Product</td>

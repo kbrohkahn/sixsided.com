@@ -1,6 +1,6 @@
 <h1><?php echo $title; ?></h1>
 
-<table class="table">
+<table class="table purchase-table ">
 	<thead>
 		<tr>
 			<td>Product</td>
