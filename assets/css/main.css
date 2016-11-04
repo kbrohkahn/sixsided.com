@@ -125,7 +125,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 
 /* Sheets pages */
 .sheet-search {}
-.sheet-search .sheet-type-select:not(:first-child) {display: none;}
+.sheet-search .sheet-type-select {display: none;}
 
 /* Media queries */
 @media screen and (min-width: 768px) {

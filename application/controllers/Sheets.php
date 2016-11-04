@@ -9,7 +9,7 @@ class Sheets extends CI_Controller {
 
 	public function index()
 	{
-		$this->search();
+		$this->display_results();
 	}
 
 	public function view($id = FALSE)
@@ -37,9 +37,22 @@ class Sheets extends CI_Controller {
 		}
 	}
 
-	public function search($era = '', $type = '', $scale = '', $year = '')
+	public function search() {
+		$year = $this->input->post('year');
+		$era = $this->input->post('era');
+		$type = $this->input->post('type');
+		$scale = $this->input->post('scale');
+
+		$this->display_results($era, $type, $scale, $year);
+
+	}
+
+	public function display_results($era = 'All', $type = 'All', $scale = 'All', $year = 'All')
 	{
-		if ($era == '' && $type == '' && $scale == '' && $year == '') {
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
+		if ($era == 'All' && $type == 'All' && $scale == 'All' && $year == 'All') {
 			$data['title'] = 'Flag Sheet Archive';
 		} else {
 			$data['title'] = 'Flag Sheet Search Results';
@@ -47,11 +60,12 @@ class Sheets extends CI_Controller {
 
 		# get all eras
 		$eras = $this->sheet_model->get_eras();
+
 		
 		# lopp through all eras and get list of associated types
 		$data['eraNameKeys'] = array();
-		foreach ($eras as &$era) {
-			$eraNameKey = $era['era'];
+		foreach ($eras as &$eraItem) {
+			$eraNameKey = $eraItem['era'];
 			$eraNameKey = str_replace(' ', '', $eraNameKey);
 			$eraNameKey = str_replace(',', '', $eraNameKey);
 			$eraNameKey = str_replace('.', '', $eraNameKey);
@@ -60,16 +74,22 @@ class Sheets extends CI_Controller {
 			$eraNameKey = str_replace('-', '', $eraNameKey);
 			$eraNameKey = $eraNameKey."-types";
 
-			$era['eraNameKey'] = $eraNameKey;
-			$era['types'] = $this->sheet_model->get_types($era['era']);
+			$eraItem['eraNameKey'] = $eraNameKey;
+			$eraItem['types'] = $this->sheet_model->get_types($eraItem['era']);
 
 			array_push($data['eraNameKeys'], $eraNameKey);
 		}
 
+		$data['eraValue'] = $era;
+		$data['typeValue'] = $type;
+		$data['scaleValue'] = $scale;
+		$data['yearValue'] = $year;
+
 		$data['eras'] = $eras;
 		$data['years'] = $this->sheet_model->get_years();
 		$data['scales'] = $this->sheet_model->get_scales();
-		$data['sheets'] = $this->sheet_model->get_sheets();
+
+		$data['sheets'] = $this->sheet_model->get_sheets($era, $type, $scale, $year);
 
 		$this->load->view('templates/header');
 		$this->load->view('sheets/index', $data);

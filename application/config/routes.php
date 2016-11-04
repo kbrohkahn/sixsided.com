@@ -56,6 +56,7 @@ $route['admin'] = 'admin/home';
 $route['vex/review'] = 'vex/review';
 $route['vex/(:any)'] = 'vex/view/$1';
 $route['vex'] = 'vex/view/home';
+$route['sheets/search'] = 'sheets/search';
 $route['sheets/about'] = 'sheets/about';
 $route['sheets/purchase'] = 'sheets/purchase';
 $route['sheets/(:any)'] = 'sheets/view/$1';

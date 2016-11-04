@@ -25,7 +25,7 @@ class Sheet_model extends CI_Model {
 
 	}
 
-	public function get_sheets($era = '', $type = '', $scale = '', $year = '')
+	public function get_sheets($era = 'All', $type = 'All', $scale = 'All', $year = 'All')
 	{
 		$this->db
 			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year", sc.scale as "scale"')
@@ -35,19 +35,19 @@ class Sheet_model extends CI_Model {
 			->join('eras e', 't.era = e.id')
 			->join('scales sc', 's.scale = sc.id');
 
-		if ($era !== '') {
+		if ($era !== 'All') {
 			$this->db->where('e.name', $era);
 		}
 
-		if ($type !== '') {
+		if ($type !== 'All') {
 			$this->db->where('t.name', $type);
 		}
 
-		if ($type !== '') {
+		if ($scale !== 'All') {
 			$this->db->where('s.scale', $scale);
 		}
 
-		if ($year !== '') {
+		if ($year !== 'All') {
 			$this->db->where('t.year', $year);
 		}
 

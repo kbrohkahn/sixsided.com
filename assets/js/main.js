@@ -48,12 +48,28 @@ function toggleVexDexHeaders() {
 	}
 }
 
-function searchSelectChanged() {
+function sheetEraSelectChanged(element) {
+	$("#sheet-era-input").val($("#sheet-era-select option:selected").text());
+	$("#sheet-type-input").val("All");
+
 	$(".sheet-type-select").hide();
 	var value = $("#sheet-era-select").val();
-	if (value == "") {
+	if (value == "All") {
 		$("#default-type-select").show();
 	} else {
 		$("#" + value).show();
 	}
+}
+
+function sheetTypeSelectChanged(element) {
+	$("#sheet-type-input").val(element.value);
+}
+
+function resetSearch() {
+	$("#sheet-era-input").val("All");
+	$("#sheet-type-input").val("All");
+	$("#sheet-year-select").val("All");
+	$("#sheet-scale-select").val("All");
+
+	$("#form-sheet-search").submit();
 }
