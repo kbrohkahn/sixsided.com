@@ -12,7 +12,6 @@ echo form_open('sheets/search', $attributes);
 
 			<select id="sheet-scale-select" class="form-control" name="scale">
 				<option>All</option>
-				
 				<?php foreach ($scales as $scale): ?>
 					<option <?php echo $scaleValue == $scale['scale'] ? " selected" : "" ?>><?= $scale['scale'] ?></option>
 				<?php endforeach; ?>
@@ -20,6 +19,10 @@ echo form_open('sheets/search', $attributes);
 			</select>
 
 		</div>
+		<div class="col-xs-12 col-sm-7">
+			<label class="control-label">To request sheets under 30mm, please <a href="mailto:<?= EMAIL ?>">email me</a></label>
+		</div>
+
 	</div>
 
 	<!-- year select -->

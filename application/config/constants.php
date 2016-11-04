@@ -98,4 +98,4 @@ define('ADMIN_PASSWORD', 'Golden12');
 define('DATABASE_NAME', 'six_sided');
 define('DATABASE_USERNAME', 'six_sided_admin');
 define('DATABASE_PASSWORD', '#28cj2509');
-define('EMAIL', 'vex@sixsided.com');
+define('EMAIL', 'Daribuck@Verizon.net');

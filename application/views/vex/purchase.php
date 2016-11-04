@@ -1,4 +1,6 @@
-<h1><?php echo $title; ?></h1>
+<h1>Under construction</h1>
+<p>Please <a href="mailto:<?= EMAIL ?>">email me</a> with any requests, online purchasing will be available soon!</p>
+<!-- <h1><?php echo $title; ?></h1>
 
 <form class="form" action="/vex/review" method="post" accept-charset="utf-8">
 	<h4>Individual decks</h4>
@@ -486,5 +488,5 @@
 	</div>
 </form>
 
-<!-- <script src="/assets/js/purchase.js" type="text/javascript"></script> -->
-<link href="/assets/css/purchase.css" rel="stylesheet">
+<!-- <script src="/assets/js/purchase.js" type="text/javascript"></script>
+<!-- <link href="/assets/css/purchase.css" rel="stylesheet"> -->

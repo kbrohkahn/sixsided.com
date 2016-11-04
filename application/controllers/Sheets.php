@@ -7,11 +7,19 @@ class Sheets extends CI_Controller {
 		$this->load->model('sheet_model');
 	}
 
-	public function about()
+	public function view($page = 'home')
 	{
+		if (!file_exists(APPPATH.'/views/sheets/'.$page.'.php'))
+		{
+			show_404();
+		}
+
+		$data['title'] =  ucfirst($page)." Flag Sheets"; // Capitalize the first letter
+
 		$this->load->view('templates/header');
-		$this->load->view('sheets/about');
+		$this->load->view('sheets/'.$page, $data);
 		$this->load->view('templates/footer');
+		
 	}
 
 	public function index()
@@ -19,7 +27,7 @@ class Sheets extends CI_Controller {
 		$this->display_results();
 	}
 
-	public function view($id = FALSE)
+	public function view_sheet($id = FALSE)
 	{
 		if ($id === FALSE) {
 			return $this->search();
