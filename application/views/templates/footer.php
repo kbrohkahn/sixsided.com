@@ -11,7 +11,7 @@
 			</div>
 			<div class="col-sm-8">
 				<div class="company">
-					Sixed Sided Simulations
+					Six Sided Simulations
 					<img alt="Six Sided SImulations logo" src="/assets/img/smallLogo.gif">
 				</div>
 			</div>

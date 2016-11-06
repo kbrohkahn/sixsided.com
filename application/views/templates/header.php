@@ -69,7 +69,31 @@
 						</tr>
 					</table>
 				</span>
-
+				
+				<a href="/sheets">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-flag" aria-hidden="true"></i></td>
+							<td>Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/sheets/purchase">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>
+							<td>Purchase Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
+				<a href="/sheets/about">
+					<table>
+						<tr>
+							<td><i class="fa fa-2x fa-info" aria-hidden="true"></i></td>
+							<td>About Flag Sheets</td>
+						</tr>
+					</table>
+				</a>
 				<a href="/vex">
 					<table>
 						<tr>
@@ -94,14 +118,6 @@
 						</tr>
 					</table>
 				</a>
-				<a href="/vex/designer_notes">
-					<table>
-						<tr>
-							<td><i class="fa fa-2x fa-sticky-note" aria-hidden="true"></i></td>
-							<td>Designer Notes</td>
-						</tr>
-					</table>
-				</a>
 				<a href="/vex/challenges">
 					<table>
 						<tr>
@@ -110,27 +126,11 @@
 						</tr>
 					</table>
 				</a>
-				<a href="/sheets">
+				<a href="/vex/designer_notes">
 					<table>
 						<tr>
-							<td><i class="fa fa-2x fa-flag" aria-hidden="true"></i></td>
-							<td>Flag Sheets</td>
-						</tr>
-					</table>
-				</a>
-				<a href="/sheets/about">
-					<table>
-						<tr>
-							<td><i class="fa fa-2x fa-info" aria-hidden="true"></i></td>
-							<td>About Flag Sheets</td>
-						</tr>
-					</table>
-				</a>
-				<a href="/sheets/purchase">
-					<table>
-						<tr>
-							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>
-							<td>Purchase Flag Sheets</td>
+							<td><i class="fa fa-2x fa-sticky-note" aria-hidden="true"></i></td>
+							<td>Designer Notes</td>
 						</tr>
 					</table>
 				</a>
