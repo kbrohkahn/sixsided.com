@@ -80,6 +80,8 @@ class Vex extends CI_Controller {
 			}
 		}
 
+		$data['total'] = $data['subtotal'] + $data['shipping'] + $data['tax'];
+
 		$this->load->view('templates/header');
 		$this->load->view('vex/review', $data);
 		$this->load->view('templates/footer');

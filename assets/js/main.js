@@ -11,65 +11,24 @@ requirejs.config({
 	}
 });
 
-requirejs(["jquery", "braintree"], function ($, braintree) {
-	$(document).ready(function() {
-		/* 
-		braintree.setup('', 'dropin', {
-			container: ''
-		});
-		*/
-		require(['purchase']);
-	});
+define(['jquery'], function ($) {
+	console.log( $ ) // OK
+	require(['purchase']);
 });
 
-requirejs(["sorttable"], function () {});
 
-requirejs(["bootstrap"], function () {});
 
-function closeNavbar() {
-	$("#content-cover").hide();
-	$("#main-navbar").animate({
-		left: "-240px"
-	}, 500);
-}
+define(['braintree'], function (braintree) {});
 
-function openNavbar() {
-	$("#content-cover").show();
-	$("#main-navbar").animate({
-		left: "0px"
-	}, 500);
-}
+// requirejs(["jquery", "braintree"], function ($, braintree) {
+// 	$(document).ready(function() {
+// 		braintree.setup('', 'dropin', {
+// 			container: 'braintree-form'
+// 		});
 
-function toggleVexDexHeaders() {
-	if ($("#vex-dex-headers").css("display") == "none") {
-		$("#vex-dex-headers").show(500);
-	} else {
-		$("#vex-dex-headers").hide(500);
-	}
-}
+// 	});
+// });
 
-function sheetEraSelectChanged(element) {
-	$("#sheet-era-input").val($("#sheet-era-select option:selected").text());
-	$("#sheet-type-input").val("All");
+requirejs(["sorttable"], function() {});
 
-	$(".sheet-type-select").hide();
-	var value = $("#sheet-era-select").val();
-	if (value == "All") {
-		$("#default-type-select").show();
-	} else {
-		$("#" + value).show();
-	}
-}
-
-function sheetTypeSelectChanged(element) {
-	$("#sheet-type-input").val(element.value);
-}
-
-function resetSearch() {
-	$("#sheet-era-input").val("All");
-	$("#sheet-type-input").val("All");
-	$("#sheet-year-select").val("All");
-	$("#sheet-scale-select").val("All");
-
-	$("#form-sheet-search").submit();
-}
+requirejs(["bootstrap"], function() {});

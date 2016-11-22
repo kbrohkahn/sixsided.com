@@ -61,7 +61,7 @@ p {line-height: 1.4em; margin-bottom: 1em}
 .breadcrumb {background-color: transparent;}
 
 /* All Content */
-#container {border: solid 2px black; border-radius: 15px; margin: 2%; max-width: 1200px; background-color: rgba(255, 255, 255, .95); box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);}
+#container {border: solid 2px black; border-radius: 15px; margin: 2%; max-width: 1200px; background-color: rgba(255, 255, 255, 1); box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);}
 
 /* Header */
 #main-navbar {z-index: 12; }
