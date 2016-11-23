@@ -93,6 +93,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 | Constants used throughout the application
 |
 */
+define('CENTURY_MINIMUM', 13);
+
+
 define('ADMIN_COOKIE_NAME', 'manage_sheets_admin');
 define('ADMIN_PASSWORD', 'Golden12');
 define('DATABASE_NAME', 'six_sided');

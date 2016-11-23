@@ -6,6 +6,10 @@ class Sheet_model extends CI_Model {
 		$this->load->database();
 	}
 
+
+
+	/* GET DATA */
+
 	public function get_sheet($id = FALSE)
 	{
 		if ($id == FALSE)
@@ -22,10 +26,9 @@ class Sheet_model extends CI_Model {
 				->where('s.id', $id);
 			return $this->db->get()->row_array();
 		}
-
 	}
 
-	public function get_sheets($era = 'All', $type = 'All', $scale = 'All', $year = 'All')
+	public function get_sheets($era = 'All', $type = 'All', $scale = 'All', $century = 'All')
 	{
 		$this->db
 			->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year", sc.scale as "scale"')
@@ -47,8 +50,11 @@ class Sheet_model extends CI_Model {
 			$this->db->where('s.scale', $scale);
 		}
 
-		if ($year !== 'All') {
-			$this->db->where('t.year', $year);
+		if ($century !== 'All') {
+			$this->db->where('t.year <', $century * 100);
+			if ($century != CENTURY_MINIMUM) {
+				$this->db->where('t.year >', ($century - 1) * 100 );
+			}
 		}
 
 		$this->db->order_by('year asc, era asc, type asc');
@@ -82,6 +88,27 @@ class Sheet_model extends CI_Model {
 			->from('types')
 			->order_by('year asc');
 		return $this->db->get()->result_array();
+	}
+
+	public function get_centuries()
+	{
+		$this->db
+			->select('year')
+			->distinct()
+			->from('types')
+			->order_by('year asc');
+		$yearItems = $this->db->get()->result_array();
+		$centuries = array();
+		foreach ($yearItems as $yearItem)
+		{
+			$century = ceil($yearItem["year"] / 100);
+			if (!in_array($century, $centuries)) {
+				array_push($centuries, $century);
+			}
+		}
+
+		$centuries[0] = CENTURY_MINIMUM;
+		return $centuries;
 	}
 
 	public function get_types($era = '')

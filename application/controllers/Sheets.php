@@ -53,21 +53,21 @@ class Sheets extends CI_Controller {
 	}
 
 	public function search() {
-		$year = $this->input->post('year');
+		$century = $this->input->post('century');
 		$era = $this->input->post('era');
 		$type = $this->input->post('type');
 		$scale = $this->input->post('scale');
 
-		$this->display_results($era, $type, $scale, $year);
+		$this->display_results($era, $type, $scale, $century);
 
 	}
 
-	public function display_results($era = 'All', $type = 'All', $scale = 'All', $year = 'All')
+	public function display_results($era = 'All', $type = 'All', $scale = 'All', $century = 'All')
 	{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		if ($era == 'All' && $type == 'All' && $scale == 'All' && $year == 'All') {
+		if ($era == 'All' && $type == 'All' && $scale == 'All' && $century == 'All') {
 			$data['title'] = 'Flag Sheet Archive';
 		} else {
 			$data['title'] = 'Flag Sheet Search Results';
@@ -98,13 +98,13 @@ class Sheets extends CI_Controller {
 		$data['eraValue'] = $era;
 		$data['typeValue'] = $type;
 		$data['scaleValue'] = $scale;
-		$data['yearValue'] = $year;
+		$data['centuryValue'] = $century;
 
 		$data['eras'] = $eras;
-		$data['years'] = $this->sheet_model->get_years();
+		$data['centuries'] = $this->sheet_model->get_centuries();
 		$data['scales'] = $this->sheet_model->get_scales();
 
-		$data['sheets'] = $this->sheet_model->get_sheets($era, $type, $scale, $year);
+		$data['sheets'] = $this->sheet_model->get_sheets($era, $type, $scale, $century);
 
 		$this->load->view('templates/header');
 		$this->load->view('sheets/index', $data);

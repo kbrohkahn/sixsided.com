@@ -25,16 +25,16 @@ echo form_open('sheets/search', $attributes);
 
 	</div>
 
-	<!-- year select -->
+	<!-- century select -->
 	<div class="form-group">
-		<label for="sheet-year-select" class="col-sm-2 control-label">Year</label>
+		<label for="sheet-century-select" class="col-sm-2 control-label">Century</label>
 		<div class="col-xs-12 col-sm-3">
 
-			<select id="sheet-year-select" class="form-control" name="year">
+			<select id="sheet-century-select" class="form-control" name="century">
 				<option>All</option>
 				
-				<?php foreach ($years as $year): ?>
-					<option <?php echo $yearValue == $year['year'] ? " selected" : "" ?>><?= $year['year'] ?></option>
+				<?php foreach ($centuries as $century): ?>
+					<option <?php echo $centuryValue == $century ? " selected" : "" ?>><?= $century == CENTURY_MINIMUM ? "Pre-".CENTURY_MINIMUM : $century?></option>
 				<?php endforeach; ?>
 
 			</select>
