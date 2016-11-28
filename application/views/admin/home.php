@@ -12,26 +12,17 @@
 		<tr>
 			<th>Name</th>
 			<th>Era</th>
-			<th>Cost</th>
+			<th>Type</th>
+			<th>Scale</th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php foreach ($sheets as $sheet_item): ?>
 			<tr>
 				<td><?php echo $sheet_item['name']; ?></td>
-				<!-- <td><a href="<?php echo $sheet_item['link']; ?>"><?php echo $sheet_item['link'];?></a></td> -->
-				<td class="right">
-					<a class="btn btn-default" href="<?php echo site_url('sheets/'.$sheet_item['slug']); ?>">
-						View
-					</a>
-
-					<a class="btn btn-default" href='/admin/edit_sheet/<?php echo $sheet_item['slug']; ?>'>
-						Edit
-					</a>
-					<a class="btn btn-danger" href='/admin/delete_sheet/<?php echo $sheet_item['slug']; ?>'>
-						Delete
-					</a>
-				</td>
+				<td><?php echo $sheet_item['era']; ?></td>
+				<td><?php echo $sheet_item['type']; ?></td>
+				<td><?php echo $sheet_item['scale']; ?></td>
 			</tr>
 		<?php endforeach;?>
 	</tbody>

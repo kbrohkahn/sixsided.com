@@ -83,7 +83,7 @@
 						</tr>
 					</table>
 				</a>
-				<a href="/sheets/purchase">
+				<a href="/purchase/items">
 					<table>
 						<tr>
 							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>
@@ -107,7 +107,7 @@
 						</tr>
 					</table>
 				</a>
-				<a href="/vex/purchase">
+				<a href="/purchase/items">
 					<table>
 						<tr>
 							<td><i class="fa fa-2x fa-dollar" aria-hidden="true"></i></td>

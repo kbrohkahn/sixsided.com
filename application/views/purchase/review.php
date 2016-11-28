@@ -11,6 +11,15 @@
 			</tr>
 		</thead>
 		<tbody>
+			<?php foreach ($flag_sheets as $flag_sheet): ?>
+				<tr>
+					<td><?= $flag_sheet ?></td>
+					<td class="price">10</td>
+					<td>1</td>
+					<td class="price">10</td>
+				</tr>
+			<?php endforeach; ?>
+
 			<?php if ($individual_deck_1 > 0): ?>
 				<tr>
 					<td>VEX DEX I</td>
@@ -145,6 +154,7 @@
 			</table>
 		</div>
 	</div>
+
 
 	<div id="braintree-dropin-container"></div>
 	<button type="submit" class="btn btn-primary">Submit Order</button>

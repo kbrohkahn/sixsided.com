@@ -60,3 +60,38 @@ $(".complete-deck-quantity").change(function() {
 	$("#total-price").html(totalPrice + parseInt($("#individual-deck-total-price").html()));
 
 });
+
+
+function addFlagSheet() {
+	var count = $("#flag-sheet-table-body").children().length;
+	var sheetItem = $("#flag-sheet-select").val();
+	
+	if (count >= 100) {
+		alert("Sorry, you can't add that many items.");
+	} else if (sheetItem == null || sheetItem == "") {
+		alert("Please select an item first.");
+	} else {
+		$("#flag-sheet-select").val("");
+
+		var inputName = "sheet-item-" + count;
+
+		$("#flag-sheet-table-body").append(
+			"<tr id='" + inputName + "-container'>" +
+				"<td>" +
+					"<span>" + sheetItem + "</span>" +
+					"<input name='" + inputName + "' id='" + inputName + "' type='hidden' value='" + sheetItem + "'>" +
+				"</td>" +
+				"<td>" +
+					"<button type='button' class='btn btn-danger' onclick='deleteItem(" + count + ")'>Delete</button>"+
+				"</td>"+
+			"</tr>"
+		);
+	}
+}
+
+function deleteItem(which) {
+	var inputId = "#sheet-item-" + which;
+	
+	$(inputId).val("");
+	$(inputId + "-container").hide();
+}

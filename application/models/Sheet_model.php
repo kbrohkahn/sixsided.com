@@ -169,10 +169,10 @@ class Sheet_model extends CI_Model {
 	{
 		$csvFile = array_map('str_getcsv', file('assets/files/data.csv'));
 
-		$this->db->empty_table('eras');
-		$this->db->empty_table('types');
-		$this->db->empty_table('sheets');
 		$this->db->empty_table('sheet_types');
+		$this->db->empty_table('sheets');
+		$this->db->empty_table('types');
+		$this->db->empty_table('eras');
 
 		foreach ($csvFile as $csvLine) {
 			$row = $csvLine[0];
@@ -225,9 +225,9 @@ class Sheet_model extends CI_Model {
 
 
 			// now insert sheet
-			$scale = 3;
+			$scale = 6;
 			// $values = array('scale' => $scale, 'row' => $row, 'number' => $number, 'book' => $book, 'tab' => $tab);
-			$values = array('scale' => $scale, 'row' => 0, 'number' => 0, 'book' => 0, 'tab' => 'A', 'name' => $era.$type);
+			$values = array('scale' => $scale, 'row' => 0, 'number' => 0, 'book' => 0, 'tab' => 'A', 'name' => $era. " - " .$type);
 			$this->db->insert('sheets', $values);
 
 			// now get sheet id
