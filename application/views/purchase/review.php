@@ -162,5 +162,5 @@
 
 <link rel="stylesheet" href="/assets/css/purchase.css">
 <script type="text/javascript">
-    setupBraintreeWithPaypal(<?= $total ?>);
+    setupBraintreeWithPaypal(<?= $total ?>, <?php echo '"'.BRAINTREE_CLIENT_TOKEN.'"' ?>);
 </script>

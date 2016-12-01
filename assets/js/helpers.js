@@ -46,8 +46,7 @@ function resetSearch() {
 	$("#form-sheet-search").submit();
 }
 
-function setupBraintreeWithPaypal(amount) {
-	var clientToken = BRAINTREE_CLIENT_TOKEN;
+function setupBraintreeWithPaypal(amount, clientToken) {
 	braintree.setup(clientToken, 'dropin', {
 		container: 'braintree-dropin-container',
 		paypal: {

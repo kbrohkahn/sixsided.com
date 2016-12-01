@@ -380,7 +380,7 @@
 		<?php 
 			for ($i = 0; $i < 100; $i++) {
 				if ($flag_sheets[$i] !== null) {
-					echo "<input name='flag-sheet-". $i ."' value='" . $flag_sheets[$i] . "'>";
+					echo "<input name='sheet-item-". $i ."' value='" . $flag_sheets[$i] . "'>";
 				}
 			}
 		?>
