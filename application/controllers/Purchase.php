@@ -4,7 +4,7 @@ class Purchase extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('sheet_model');
+		$this->load->model('Purchase_model');
 	}
 
 	public function view($page = 'items')
@@ -23,7 +23,7 @@ class Purchase extends CI_Controller {
 	}
 
 	public function items() {
-		$data['sheetItems'] = $this->sheet_model->get_sheets();
+		$data['sheetItems'] = $this->Purchase_model->get_sheets();
 		$data['title'] =  "Select Items";
 
 
@@ -70,6 +70,7 @@ class Purchase extends CI_Controller {
 	public function review() {
 		$data['title'] =  "Review Your Purchase";
 
+		$data['email'] = $this->input->post('email');
 		$data['country'] = $this->input->post('country');
 		$data['state'] = $this->input->post('state');
 		$data['other_country'] = $this->input->post('other-country');
@@ -137,9 +138,28 @@ class Purchase extends CI_Controller {
 	}
 
 
-
-	public function purchase() {
+	public function complete() {
+		$nonceFromTheClient = $this->input->post('payment_method_nonce');
+		$total = $this->input->post('total');
+		$email = $this->input->post('email');
 		
+		$result = Braintree_Transaction::sale([
+			'amount' => $total,
+			'paymentMethodNonce' => $nonceFromTheClient,
+			'options' => [
+				'submitForSettlement' => True
+			]
+		]);
 
+		if ($result->success) {
+			$data["confirmation_code"] =  $this->Purchase_model->save_transaction($nonceFromTheClient, $email);
+
+			$this->load->view('templates/header');
+			$this->load->view('purchase/complete', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$data["message"] = "Error processing payment: " . $result->transaction->processorSettlementResponseText;
+			$this->review();
+		}
 	}
 }

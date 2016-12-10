@@ -1,6 +1,10 @@
 <h1><?= $title ?></h1>
 
-<form class="review-form">
+<?php if (!is_null($message)) {
+	echo "<p><b>" . $message . "</b></p>";
+} ?>
+
+<form class="form" action="/purchase/complete" method="post" accept-charset="utf-8">
 	<table class="table purchase-table ">
 		<thead>
 			<tr>
@@ -128,7 +132,7 @@
 	</table>
 
 	<div class="row">
-		<div class="col-sm-6 col-sm-offset-6">
+		<div class="col-sm-6">
 			<h4 class='text-right'>Shipping info</h4>
 			<table class="table">
 				<tr>
@@ -155,6 +159,9 @@
 		</div>
 	</div>
 
+	<div class="hidden">
+		<input name="total" value=<?= $total ?>>
+	</div>
 
 	<div id="braintree-dropin-container"></div>
 	<button type="submit" class="btn btn-primary">Submit Order</button>
@@ -162,5 +169,5 @@
 
 <link rel="stylesheet" href="/assets/css/purchase.css">
 <script type="text/javascript">
-    setupBraintreeWithPaypal(<?= $total ?>, <?php echo '"'.BRAINTREE_CLIENT_TOKEN.'"' ?>);
+	setupBraintreeWithPaypal(<?= $total ?>, <?php echo '"'.BRAINTREE_CLIENT_TOKEN.'"' ?>);
 </script>
