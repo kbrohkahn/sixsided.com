@@ -1,4 +1,9 @@
-<h4>Shipping Address</h4>
+<h1>Shipping Address</h1>
+
+<?php if (strlen($errorMessage) > 0) {
+	echo "<p><b>" . $errorMessage . "</b></p>";
+} ?>
+
 <form class="form" action="/purchase/review" method="post" accept-charset="utf-8">
 	<div class='row'>
 		<div class='col-xs-6'>
@@ -21,7 +26,7 @@
 		</div>
 		<div class='col-xs-12'>
 			<div class='form-group'>
-				<label for="address2">Address line 2</label>
+				<label for="address-line-2">Address line 2</label>
 				<input type="text" class="form-control" name='address2' id="address2">
 			</div>
 		</div>
@@ -363,6 +368,14 @@
 				</select>
 			</div>
 		</div>	
+		<br>
+		<div class='col-xs-12'>
+			<div class='form-group'>
+				<label for="email">Email Address ()</label>
+				<input type="text" class="form-control" name='email' id="email" required>
+			    <p class="help-block">Used for confirmation email and finding your orders. We don't send spam or sell your email address.</p>
+			</div>
+		</div>
 	</div>
 
 	<div class='hidden'>
@@ -384,7 +397,6 @@
 				}
 			}
 		?>
-
 	</div>
 
 

@@ -1,7 +1,7 @@
 <h1><?= $title ?></h1>
 
-<?php if (!is_null($message)) {
-	echo "<p><b>" . $message . "</b></p>";
+<?php if (strlen($errorMessage) > 0) {
+	echo "<p><b>" . $errorMessage . "</b></p>";
 } ?>
 
 <form class="form" action="/purchase/complete" method="post" accept-charset="utf-8">
@@ -132,35 +132,52 @@
 	</table>
 
 	<div class="row">
-		<div class="col-sm-6">
-			<h4 class='text-right'>Shipping info</h4>
-			<table class="table">
-				<tr>
-					<td>Country</td>
-					<td><?= $country ?></td>
-				</tr>
-				<tr>
-					<td>State</td>
-					<td><?= $state ?></td>
-				</tr>
-				<tr>
-					<td>Other Country</td>
-					<td><?= $other_country ?></td>
-				</tr>
-				<tr>
-					<td>Other Country Mail</td>
-					<td><?= $other_country_mail ?></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
+		<div class="col-xs-12">
+			<h4>Shipping Address</h4>
+			<?php
+				echo "<div>" . $firstName . " " .$lastName . "</div>"
+					. "<div>" . $address . "</div>"
+					. "<div>" . $addressLine2 . "</div>"
+					. "<div>" . $city . ", " . $state . " " . $zip . "</div>"
+					. "<div>" . $country . "</div>"
+					. "<div>" . $email . "</div>";
+			?>
 		</div>
 	</div>
 
-	<div class="hidden">
+
+	<div class='hidden'>
 		<input name="total" value=<?= $total ?>>
+		
+		<input name="individual-deck-1" value=<?= $individual_deck_1 ?>>
+		<input name="individual-deck-2" value=<?= $individual_deck_2 ?>>
+		<input name="individual-deck-3" value=<?= $individual_deck_3 ?>>
+		<input name="individual-deck-4" value=<?= $individual_deck_4 ?>>
+		<input name="individual-deck-5" value=<?= $individual_deck_5 ?>>
+		<input name="complete-deck-1" value=<?= $complete_deck_1 ?>>
+		<input name="complete-deck-2" value=<?= $complete_deck_2 ?>>
+		<input name="complete-deck-3" value=<?= $complete_deck_3 ?>>
+		<input name="complete-deck-4" value=<?= $complete_deck_4 ?>>
+		<input name="complete-deck-5" value=<?= $complete_deck_5 ?>>
+
+		<?php 
+			for ($i = 0; $i < 100; $i++) {
+				if ($flag_sheets[$i] !== null) {
+					echo "<input name='sheet-item-". $i ."' value='" . $flag_sheets[$i] . "'>";
+				}
+			}
+		?>
+	
+		<input name="first-name" value=<?= $firstName ?>>
+		<input name="last-name" value=<?= $lastName ?>>
+		<input name="address" value=<?= $address ?>>
+		<input name="address-line-2" value=<?= $addressLine2 ?>>
+		<input name="city" value=<?= $city ?>>
+		<input name="state" value=<?= $state ?>>
+		<input name="zip" value=<?= $zip ?>>
+		<input name="country" value=<?= $country ?>>
+		<input name="email" value=<?= $email ?>>
+
 	</div>
 
 	<div id="braintree-dropin-container"></div>

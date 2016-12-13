@@ -45,13 +45,67 @@ class Purchase_model extends CI_Model {
 		return $this->db->get()->result_array();
 	}
 
-	public function save_transaction($braintreeNonce, $email) {
-		$confirmationCode = com_create_guid();
+	public function save_address($firstName, $lastName, $address, $addressLine2, $city, $state, $zip, $country, $email) {
+		// check if address already exists
+		$this->db->select('id')
+				->from('addresses')
+				->where('email', $email);
+		$existingItemArray = $this->db->get()->result_array();
+
+		if (count($existingItemArray) > 0) {
+			// address already exists, just return the id
+			return $existingItemArray[0]["id"];
+		}
+		else 
+		{
+			// save address
+			$values = array('email' => $email, 'first_name' => $firstName, 'last_name' => $lastName, "address" => $address, "address_line_2" => $addressLine2, "city" => $city, "state" => $state, "zip" => $zip, "country" => $country);
+			$this->db->insert('addresses', $values);
+
+			$this->db->select('id')
+					->from('addresses')
+					->where('email', $email);
+
+			$newItem = $this->db->get()->result_array()[0];
+			
+			if (is_null($newItem)) {
+				return -1;
+			} else {
+				return $newItem["id"];
+			}
+		}
+	}
+
+	public function save_transaction($braintreeNonce, $email, $address_id) {
+		$confirmationCode = $this->get_confirmation_code();
+
+
+
 		$transactionDate = time();
 
-		$values = array('braintree_nonce' => $braintreeNonce, 'email' => $email, 'confirmation_code' => $confirmationCode, "transaction_date" => $transactionDate);
+		$values = array('braintree_nonce' => $braintreeNonce, 'email' => $email, 'confirmation_code' => $confirmationCode, "transaction_date" => $transactionDate, "address_id" => $address_id, 'success' => 0);
 		$this->db->insert('transactions', $values);
 
 		return $confirmationCode;
+	}
+
+	public function set_transaction_success($braintreeNonce, $confirmationCode) {
+		$this->db->set('success', 1)
+				->where('braintree_nonce', $braintreeNonce)
+				->where('confirmation_code', $confirmationCode)
+				->update('transactions');
+
+	}
+
+	public function get_confirmation_code()
+	{
+		if (function_exists('com_create_guid') === true)
+		{
+			return trim(com_create_guid(), '{}');
+		}
+		else
+		{
+			return sprintf('%04X%04X-%04X-%04X-%04X-%04X%04X%04X', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535));
+		}
 	}
 }
