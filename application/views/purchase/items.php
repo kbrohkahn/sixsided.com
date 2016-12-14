@@ -139,7 +139,7 @@
 		</tbody>
 	</table>
 	
-	<div class="form-group">
+	<div class="form-group submit-button-container">
 		<button type="submit" class="btn btn-primary">Enter Shipping</button>
 	</div>
 </form>

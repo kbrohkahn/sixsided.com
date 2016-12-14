@@ -219,17 +219,37 @@ class Purchase extends CI_Controller {
 					$recipient = $email;
 					$subject = "Six Sided - Thank you for your purchase!";
 					$message = "Your confirmation code is " . $confirmationCode;
-					$headers = "From: systems@sixsided.com
-						Reply-To: daribuck@sixsided.com
-						X-Mailer: PHP/'" . phpversion();
 
-					mail($recipient, $subject, $message, $headers);
+					$this->sendEmail($recipient, $subject, $message, true, false); 
 
 					$this->load->view('templates/header');
 					$this->load->view('purchase/complete', $data);
 					$this->load->view('templates/footer');
 				} else {
-					$data["error_message"] = "Error processing payment: " . $result->transaction->processorSettlementResponseText;
+					// check for validation errors
+					$errorMessage = "";
+					foreach($result->errors->deepAll() as $error) {
+ 						$errorMessage .= ($error->code . ": " . $error->message . "\n");
+					}
+
+					// no validation errors, find transaction error
+					if ($errorMessage == "") {
+						switch ($result->transaction->status) {
+							case "processor_declined":
+								$errorMessage = $result->transaction->processorResponseText . "\n" . $result->transaction->additionalProcessorResponse;
+								break;
+							case "settlement_declined":
+								$errorMessage = $result->transaction->processorSettlementResponseText;
+								break;
+							case "gateway_rejected":
+								$errorMessage = "Account " . $result->transaction->gatewayRejectionReason . " is invalid.";
+								break;
+						}
+					}
+
+
+					$data["error_message"] = $errorMessage;
+
 					$this->review();
 				}
 			}
@@ -257,6 +277,50 @@ class Purchase extends CI_Controller {
 			return "Email must be less than 256 characters";
 		} else {
 			return "";
+		}
+	}
+
+	public function sendEmail($recipient, $subject, $message, $bccDev, $bccOwner) {
+		require APPPATH.'/libraries/phpmailer/phpmailer/PHPMailerAutoload.php';
+
+		$mail = new PHPMailer;
+
+		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+		$mail->isSMTP();
+		$mail->Host = SMTP_SERVER;
+		$mail->SMTPAuth = true;
+		$mail->Username = SMTP_EMAIL;
+		$mail->Password = SMTP_PASSWORD;
+		$mail->SMTPSecure = 'ssl';
+		$mail->Port = SMTP_PORT;
+
+		$mail->setFrom(SMTP_REPLY_TO, COMPANY_NAME);
+		$mail->addAddress($recipient);
+		//$mail->addAddress($recipient, "Joe Schmoe");
+		$mail->addReplyTo(SMTP_REPLY_TO, COMPANY_NAME);
+		
+		if ($bccDev) {
+			$mail->addBCC(DEV_EMAIL);
+		}
+		if ($bccOwner) {
+			$mail->addBCC(EMAIL);
+		}
+
+		// $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+		// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+		
+		$mail->Subject = $subject;
+		$mail->Body = $message;
+
+		$mail->isHTML(true);
+		$mail->AltBody = $message;
+
+		if(!$mail->send()) {
+			echo 'Message could not be sent.';
+			echo 'Mailer Error: ' . $mail->ErrorInfo;
+		} else {
+			echo 'Message has been sent';
 		}
 	}
 }

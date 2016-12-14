@@ -40,6 +40,8 @@ a.btn-primary {color: #fff;}
 
 p {line-height: 1.4em; margin-bottom: 1em}
 .subheader {font-size: 1.6em; margin: 1em 0;}
+.error-message {font-size: 1.2em; font-weight: 700; color: red;}
+.submit-button-container {text-align: right;}
 
 /* Helpers */
 .center {margin: 0 auto;}

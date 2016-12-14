@@ -1,10 +1,11 @@
 <h1><?= $title ?></h1>
 
 <?php if (strlen($errorMessage) > 0) {
-	echo "<p><b>" . $errorMessage . "</b></p>";
+	echo "<p class='error-message'>" . $errorMessage . "</p>";
 } ?>
 
 <form class="form" action="/purchase/complete" method="post" accept-charset="utf-8">
+	<h4>Items</h4>
 	<table class="table purchase-table ">
 		<thead>
 			<tr>
@@ -131,9 +132,9 @@
 		</tbody>
 	</table>
 
+	<h4>Shipping Address</h4>
 	<div class="row">
 		<div class="col-xs-12">
-			<h4>Shipping Address</h4>
 			<?php
 				echo "<div>" . $firstName . " " .$lastName . "</div>"
 					. "<div>" . $address . "</div>"
@@ -145,6 +146,12 @@
 		</div>
 	</div>
 
+	<h4>Payment Info <small>Processed by Braintree</small></h4>
+	<div id="braintree-dropin-container"></div>
+	
+	<div class="form-group submit-button-container">
+		<button type="submit" class="btn btn-primary">Submit Order</button>
+	</div>
 
 	<div class='hidden'>
 		<input name="total" value=<?= $total ?>>
@@ -179,9 +186,7 @@
 		<input name="email" value=<?= $email ?>>
 
 	</div>
-
-	<div id="braintree-dropin-container"></div>
-	<button type="submit" class="btn btn-primary">Submit Order</button>
+	
 </form>
 
 <link rel="stylesheet" href="/assets/css/purchase.css">

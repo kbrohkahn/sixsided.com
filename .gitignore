@@ -6,3 +6,9 @@
 !*/cache/.htaccess
 
 application/config/constants.php
+
+
+# cert files
+sixsided.com.crt
+sixsided.com.key
+4CCDDCA7C490D5BF6EF6E483D76E45EE.txt

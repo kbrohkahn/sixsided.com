@@ -79,8 +79,6 @@ class Purchase_model extends CI_Model {
 	public function save_transaction($braintreeNonce, $email, $address_id) {
 		$confirmationCode = $this->get_confirmation_code();
 
-
-
 		$transactionDate = time();
 
 		$values = array('braintree_nonce' => $braintreeNonce, 'email' => $email, 'confirmation_code' => $confirmationCode, "transaction_date" => $transactionDate, "address_id" => $address_id, 'success' => 0);
@@ -94,7 +92,6 @@ class Purchase_model extends CI_Model {
 				->where('braintree_nonce', $braintreeNonce)
 				->where('confirmation_code', $confirmationCode)
 				->update('transactions');
-
 	}
 
 	public function get_confirmation_code()

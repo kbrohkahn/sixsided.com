@@ -1,7 +1,7 @@
 <h1>Shipping Address</h1>
 
 <?php if (strlen($errorMessage) > 0) {
-	echo "<p><b>" . $errorMessage . "</b></p>";
+	echo "<p class='error-message'>" . $errorMessage . "</p>";
 } ?>
 
 <form class="form" action="/purchase/review" method="post" accept-charset="utf-8">
@@ -41,7 +41,7 @@
 			<div class='form-group'>
 				<label for="state">State</label>
 				<select class="form-control" id="state" name="state">
-					<option value="none">None</option>
+					<option value="">--- No state</option>
 					<option value="AK">Alaska</option>
 					<option value="AL">Alabama</option>
 					<option value="AZ">Arizona</option>
@@ -371,11 +371,15 @@
 		<br>
 		<div class='col-xs-12'>
 			<div class='form-group'>
-				<label for="email">Email Address ()</label>
+				<label for="email">Email Address</label>
 				<input type="text" class="form-control" name='email' id="email" required>
 			    <p class="help-block">Used for confirmation email and finding your orders. We don't send spam or sell your email address.</p>
 			</div>
 		</div>
+	</div>
+
+	<div class="form-group submit-button-container">
+		<button type="submit" class=" btn btn-primary">Review Order</button>
 	</div>
 
 	<div class='hidden'>
@@ -397,11 +401,6 @@
 				}
 			}
 		?>
-	</div>
-
-
-	<div class="form-group">
-		<button type="submit" class=" btn btn-primary">Review Order</button>
 	</div>
 
 </form>

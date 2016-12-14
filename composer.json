@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.2.4",
-    	"braintree/braintree_php": "3.18.0"
+		"braintree/braintree_php": "3.18.0",
+		"phpmailer/phpmailer": "~5.2"
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*"
