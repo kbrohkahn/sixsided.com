@@ -76,13 +76,24 @@ class Purchase_model extends CI_Model {
 		}
 	}
 
-	public function save_transaction($braintreeNonce, $email, $address_id) {
+	public function save_transaction($braintreeNonce, $total, $email, $address_id, $items) {
+		// create confirmation code
 		$confirmationCode = $this->get_confirmation_code();
 
-		$transactionDate = time();
-
-		$values = array('braintree_nonce' => $braintreeNonce, 'email' => $email, 'confirmation_code' => $confirmationCode, "transaction_date" => $transactionDate, "address_id" => $address_id, 'success' => 0);
+		$values = array('braintree_nonce' => $braintreeNonce, 'total' => $total, 'email' => $email, 'confirmation_code' => $confirmationCode, "transaction_date" => time(), "address_id" => $address_id, 'success' => 0);
 		$this->db->insert('transactions', $values);
+
+		// get id for transaction we just inserted
+		$this->db->select('id')
+				->from('transactions')
+				->where('confirmation_code', $confirmationCode);
+		$transactionId = $this->db->get()->result_array()[0]["id"];
+
+		// save items with new transaction id
+		foreach ($items as $item) {
+			$itemValues = array('transaction_id' => $transactionId, 'item_name' => $item["name"], 'count' => $item["count"], 'price' => $item["price"]);
+			$this->db->insert('transaction_items', $itemValues);
+		}
 
 		return $confirmationCode;
 	}

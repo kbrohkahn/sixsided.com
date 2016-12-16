@@ -134,6 +134,8 @@ class Purchase extends CI_Controller {
 
 			$this->load->view('templates/header');
 			$this->load->view('purchase/review', $data);
+
+			$this->load->view('purchase/complete', $data);
 			$this->load->view('templates/footer');
 		}
 
@@ -190,12 +192,50 @@ class Purchase extends CI_Controller {
 			if ($addressId <= 0) {
 				throw new Exception("Failed to save address");
 			} else {
-
 				// address saved and we have addressId, so now save transaction
 				$nonceFromTheClient = $this->input->post('payment_method_nonce');
-				$confirmationCode = $this->Purchase_model->save_transaction($nonceFromTheClient, $email, $addressId);
-				$data["confirmation_code"] = $confirmationCode;
 
+
+
+				// get list of items purchased
+				$itemsList = array();
+
+				for ($i=1; $i<=5; $i++) {
+					$completeDeckCountI = $data['complete_deck_' . $i];
+					if ($completeDeckCountI > 0) {
+						$item['name'] = 'complete_deck_' . $i;
+						$item['count'] = $completeDeckCountI;
+						$item['price'] = COMPLETE_DECK_COST;
+						array_push($itemsList, $item);
+					}
+				}
+
+				for ($i=1; $i<=5; $i++) {
+					$individualDeckCountI = $data['individual_deck_' . $i];
+					if ($individualDeckCountI > 0) {
+						$item['name'] = 'individual_deck_' . $i;
+						$item['count'] = $individualDeckCountI;
+						$item['price'] = $data['individual_deck_price'];
+						array_push($itemsList, $item);
+					}
+				}
+
+				foreach ($data['flag_sheets'] as $flagSheet) {
+					$item['name'] = $flagSheet;
+					$item['price'] = INDIVIDUAL_SHEET_COST;
+					$item['count'] = 1;
+						array_push($itemsList, $item);
+				}
+
+			
+
+				// save transaction (with items)
+				$confirmationCode = $this->Purchase_model->save_transaction($nonceFromTheClient, $data["total"], $email, $addressId, $itemsList);
+
+
+
+				$data["confirmation_code"] = $confirmationCode;
+				$data['errorMessage'] = "";
 
 				// all data saved, now perform the transaction
 				require_once APPPATH.'/libraries/braintree-php-3.18.0/lib/Braintree.php';
@@ -218,12 +258,17 @@ class Purchase extends CI_Controller {
 
 					$recipient = $email;
 					$subject = "Six Sided - Thank you for your purchase!";
-					$message = "Your confirmation code is " . $confirmationCode;
+					
+					$innerMessage = "Thank you for your purchase, your confirmation code is " . $confirmationCode;
+					$message = $this->getIncludeContents(APPPATH . 'views/purchase/review.php', $innerMessage, $data);
 
-					$this->sendEmail($recipient, $subject, $message, true, false); 
+					require APPPATH.'/libraries/phpmailer/phpmailer/PHPMailerAutoload.php';
+					
+					$this->sendEmail($recipient, $subject, $message, true, false, false); 
 
 					$this->load->view('templates/header');
-					$this->load->view('purchase/complete', $data);
+					$this->load->view('purchase/summary', $data);
+					$this->load->view('purchase/review', $data);
 					$this->load->view('templates/footer');
 				} else {
 					// check for validation errors
@@ -280,20 +325,21 @@ class Purchase extends CI_Controller {
 		}
 	}
 
-	public function sendEmail($recipient, $subject, $message, $bccDev, $bccOwner) {
-		require APPPATH.'/libraries/phpmailer/phpmailer/PHPMailerAutoload.php';
-
+	public function sendEmail($recipient, $subject, $message, $bccDev, $bccOwner, $useBackupAccount) {
 		$mail = new PHPMailer;
 
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 		$mail->isSMTP();
-		$mail->Host = SMTP_SERVER;
 		$mail->SMTPAuth = true;
-		$mail->Username = SMTP_EMAIL;
-		$mail->Password = SMTP_PASSWORD;
-		$mail->SMTPSecure = 'ssl';
-		$mail->Port = SMTP_PORT;
+		$mail->SMTPSecure = 'tls';
+		$mail->SMTPDebug = 0;
+		$mail->Debugoutput = 'html';
+
+		$mail->Host = $useBackupAccount ? BACKUP_SMTP_SERVER : SMTP_SERVER;
+		$mail->Username = $useBackupAccount ? BACKUP_SMTP_EMAIL : SMTP_EMAIL;
+		$mail->Password = $useBackupAccount ? BACKUP_SMTP_PASSWORD : SMTP_PASSWORD;
+		$mail->Port = $useBackupAccount ? BACKUP_SMTP_PORT : SMTP_PORT;
 
 		$mail->setFrom(SMTP_REPLY_TO, COMPANY_NAME);
 		$mail->addAddress($recipient);
@@ -314,13 +360,25 @@ class Purchase extends CI_Controller {
 		$mail->Body = $message;
 
 		$mail->isHTML(true);
-		$mail->AltBody = $message;
+		// $mail->AltBody = $message;
 
 		if(!$mail->send()) {
-			echo 'Message could not be sent.';
-			echo 'Mailer Error: ' . $mail->ErrorInfo;
-		} else {
-			echo 'Message has been sent';
+			if (!$useBackupAccount) {
+				$this->sendEmail($recipient, $subject, $message, $bccDev, $bccOwner, true);
+			} else {
+				echo 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;	
+			}
 		}
+	}
+	
+	public function getIncludeContents($filename, $innerMessage, $variablesToMakeLocal) {
+		extract($variablesToMakeLocal);
+
+		ob_start();
+		include APPPATH . 'views/templates/print_header.php';
+		echo $innerMessage;
+		include $filename;
+		include APPPATH . 'views/templates/print_footer.php';
+		return ob_get_clean();
 	}
 }

@@ -17,5 +17,17 @@
 	},
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*"
+	},
+	"autoload": {
+		"classmap": [
+			"class.oauth.php",
+			"class.phpmailer.php",
+			"class.phpmaileroauth.php",
+			"class.phpmaileroauthgoogle.php",
+			"class.smtp.php",
+			"class.pop3.php",
+			"extras/EasyPeasyICS.php",
+			"extras/ntlm_sasl_client.php"
+		]
 	}
 }
