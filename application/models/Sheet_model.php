@@ -174,11 +174,14 @@ class Sheet_model extends CI_Model {
 		$this->db->empty_table('types');
 		$this->db->empty_table('eras');
 
+		$scales = get_scales();
+		$scaleArrayStartIndex = 7;
+
 		foreach ($csvFile as $csvLine) {
-			$row = $csvLine[0];
-			$num = $csvLine[1];
-			$book = $csvLine[2];
-			$tab = $csvLine[3];
+			$num = $csvLine[0];
+			$book = $csvLine[1];
+			$tab = $csvLine[2];
+			$page = $csvLine[3];
 			$era = $csvLine[4];
 			$type = $csvLine[5];
 			$year = $csvLine[6];
@@ -224,26 +227,38 @@ class Sheet_model extends CI_Model {
 
 
 
-			// now insert sheet
-			$scale = 6;
-			// $values = array('scale' => $scale, 'row' => $row, 'number' => $number, 'book' => $book, 'tab' => $tab);
-			$values = array('scale' => $scale, 'row' => 0, 'number' => 0, 'book' => 0, 'tab' => 'A', 'name' => $era. " - " .$type);
-			$this->db->insert('sheets', $values);
+			// now insert sheets
+			// $values = array('scale' => $scale, 'row' => $row, 'number' => $number, 'book' => $book, 'tab' => $tab, 'name' => $scale . $era. "-" .$type);
+			for ($i = 0; $i < sizeof($scales); $i++)
+			{
+				$code = $csvLine[$scaleArrayStartIndex + $i];
+				$scale = $scales[$i];
 
-			// now get sheet id
-			$query = $this->db
-				->select('id')
-				->from('sheets')
-				->where($values)
-				->get();
-			$sheetId = $query->row()->id;
+				$values = array('scale' => $scale, 'name' => $scale . $code);
 
+				// first see if sheet exists in DB
+				$query = $this->db
+					->select('id')
+					->from('sheets')
+					->where($values)
+					->get();
+				$sheetId = $query->row()->id;
 
+				// if sheet doesn't exists, insert it
+				if (!isset($sheetId)) {
+					$this->db->insert('sheets', $values);
+					$query = $this->db
+						->select('id')
+						->from('sheets')
+						->where($values)
+						->get();
+					$sheetId = $query->row()->id;
+				}
 
-			// now insert sheet - type reference
-			$values = array('sheet_id' => $sheetId, 'type_id' => $typeId);
-			$this->db->insert('sheet_types', $values);
-
+				// now insert sheet - type reference
+				$values = array('sheet_id' => $sheetId, 'type_id' => $typeId);
+				$this->db->insert('sheet_types', $values);
+			}
 		}
 	}
 }
