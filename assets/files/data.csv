@@ -1,59 +1,59 @@
-﻿,I,,1,Conjectural Flags,Babylon / Assyria / Sumer /Akkad / Ur,Ancient,Aa,Aa,Aa,Aa,Aa,Aa
-,I,,2,Conjectural Flags,Egypt / Hittite / Mitanni / Assyria,Ancient,Ab,Aa,Aa,Aa,Aa,Aa
-,I,,3,Conjectural Flags,Phillistine / Israel / Judah / Egypt,Ancient,Ac,Ab,Ab,Aa,Aa,Aa
-,I,,4,Conjectural Flags,Phrygia / Lydia / Media / Babylon,Ancient,Ad,Ab,Ab,Aa,Aa,Aa
-,I,,5,Conjectural Flags,"Greece 1 (Sparta, Peleopeon League. Etc.)",Ancient,Ae,Ac,Ac,Ab,Ab,Ab
-,I,,6,Conjectural Flags,"Greece 2 (Athens, Corinth, Thebes, etc.)",Ancient,Af,Ac,Ac,Ab,Ab,Ab
-,I,,7,Conjectural Flags,Macedonia and Allies,Ancient,Ag,Ad,Ad,Ab,Ab,Ab
-,I,,8,Conjectural Flags,Persia  and Allies,Ancient,Ah,Ad,Ad,Ab,Ab,Ab
-,I,,9,Conjectural Flags,Republican Rome and Allies,Ancient,Aj,Ae,Ae,Ac,Ac,Ac
-,I,,10,Conjectural Flags,Carthage and Allies,Ancient,Ak,Ae,Ae,Ac,Ac,Ac
-,I,,11,Conjectural Flags,Imperial Rome and Allies,Ancient,Al,Af,Af,Ac,Ac,Ac
-,I,,12,Conjectural Flags,Parthians and Allies,Ancient,Am,Af,Af,Ac,Ac,Ac
-,I,,13,Conjectural Flags,Celtic Nations and Allies,Ancient,An,Ag,Ag,Ad,Ad,Ad
-,I,,14,Conjectural Flags,Normans and Allies,Ancient,Ap,Ag,Ag,Ad,Ad,Ad
-,I,,15,Conjectural Flags,Angles/Saxons and Allies,Ancient,Aq,Ah,Ah,Ad,Ad,Ad
-,I,,16,Conjectural Flags,Vikings and Allies,Ancient,Ar,Ah,Ah,Ad,Ad,Ad
-2,I,A,17,Modern Naval Jacks Used for Medieval Flags,1,Medieval,As,Aj,Aj,Ae,Ae,Ae
-2,I,A,18,Modern Naval Ensigns for Medieval Flags,1,Medieval,At,Aj,Aj,Ae,Ae,Ae
-,I,,19,Modern Naval Jacks Used for Medieval Flags,2,Medieval,Au,Ak,Ak,Ae,Ae,Ae
-,I,,20,Modern Naval Ensigns for Medieval Flags,2,Medieval,Av,Ak,Ak,Ae,Ae,Ae
-2,I,C,21,Pirate Flags,,Medieval,Aw,Al,Al,Af,Af,Af
-2,I,C,22,Heraldic Shield Divisions,,Medieval,Ax,Al,Al,Af,Af,Af
-2,I,D,23,Medieval Animal Banners,,Medieval,Ay,Am,Am,Af,Af,Af
-2,I,D,24,Medieval Heraldic Icons on Banners,,Medieval,Az,Am,Am,Af,Af,Af
-2,I,E,25,Divisions and Ordinaries,Blue,Medieval,Ba,An,An,Ag,Ag,Ag
-2,I,E,26,Divisions and Ordinaries,Black,Medieval,Bb,An,An,Ag,Ag,Ag
-2,I,F,27,Divisions and Ordinaries,Red,Medieval,Bc,Ap,Ap,Ag,Ag,Ag
-2,I,F,28,Divisions and Ordinaries,Green,Medieval,Bd,Ap,Ap,Ag,Ag,Ag
-2,I,G,29,Crusader Era Armies,Basic Cross Designs,Medieval,Be,Aq,Aq,Ah,Ah,Ah
-2,I,H,30,Crusader Era Armies,Islamic Banner Designs,Medieval,Bf,Aq,Aq,Ah,Ah,Ah
-2,I,K,31,Tannenburg / Grunwald 1410,Teutonic Knights,Medieval,Bg,Ar,Ar,Ah,Ah,Ah
-2,I,L,32,Tannenburg / Grunwald 1410,Poland & Lithuania,Medieval,Bh,Ar,Ar,Ah,Ah,Ah
-,I,,33,Crusader Armies,Christians,Medieval,Bj,As,As,Aj,Aj,Aj
-,I,,34,Crusader Armies,Seljuks,Medieval,Bk,As,As,Aj,Aj,Aj
-,I,,35,Medieval Chinese Armies,1,Medieval,Bl,At,At,Aj,Aj,Aj
-,I,,36,Medieval Chinese Armies,2,Medieval,Bm,At,At,Aj,Aj,Aj
-2,I,M,37,"States of Germany, Brazil and Spain",1,Medieval,Bn,Au,Au,Ak,Ak,Ak
-2,I,N,38,"States of Germany, Brazil and Spain",2,Medieval,Bp,Au,Au,Ak,Ak,Ak
-2,I,O,39,"Provinces of Norway, Argentina and Italy",1,Medieval,Bq,Av,Av,Ak,Ak,Ak
-2,I,P,40,"Provinces of Norway, Argentina and Italy",2,Medieval,Br,Av,Av,Ak,Ak,Ak
-2,I,Q,41,"Provinces of Austria, Canada and UK/France",,Medieval,Bs,Aw,Aw,Al,Al,Al
-2,I,R,42,Historic Regions of France,,Medieval,Bt,Aw,Aw,Al,Al,Al
-2,I,S,43,Provinces and Regions of Belgium and Netherlands,,Medieval,Bu,Ax,Ax,Al,Al,Al
-2,I,T,44,Cantons of Switzerland,,Medieval,Bv,Ax,Ax,Al,Al,Al
-2,I,U,45,Samurai Flags from Japanese Prefectures,1,Medieval,Bw,Ay,Ay,Am,Am,Am
-2,I,V,46,Samurai Flags from Japanese Prefectures,2,Medieval,Bx,Ay,Ay,Am,Am,Am
-2,I,W,47,Samurai Flags from Japan,Takeda 1,Medieval,By,Az,Az,Am,Am,Am
-2,I,X,48,Samurai Flags from Japan,Uesugi 2,Medieval,Bz,Az,Az,Am,Am,Am
-,I,,49,Medieval Period,Papacy,Medieval,Ca,Ba,Ba,An,An,An
-,I,,50,Medieval Period,Burgundy,Medieval,Cb,Ba,Ba,An,An,An
-,I,,51,Medieval Period,Knightly Orders,Medieval,Cc,Bb,Bb,An,An,An
-,I,,52,Medieval Period,English,Medieval,Cd,Bb,Bb,An,An,An
-,I,,53,Medieval Period,French,Medieval,Ce,Bc,Bc,Ap,Ap,Ap
-,I,,54,Medieval Period,Low Countries,Medieval,Cf,Bc,Bc,Ap,Ap,Ap
-,I,,55,Medieval Period,Central Europe,Medieval,Cg,Bd,Bd,Ap,Ap,Ap
-,I,,56,Medieval Period,Other Crusaders,Medieval,Ch,Bd,Bd,Ap,Ap,Ap
+﻿,I,,1,Conjectural Flags,Babylon / Assyria / Sumer /Akkad / Ur,0,Aa,Aa,Aa,Aa,Aa,Aa
+,I,,2,Ancient Conjectural Flags,Egypt / Hittite / Mitanni / Assyria,0,Ab,Aa,Aa,Aa,Aa,Aa
+,I,,3,Ancient Conjectural Flags,Phillistine / Israel / Judah / Egypt,0,Ac,Ab,Ab,Aa,Aa,Aa
+,I,,4,Ancient Conjectural Flags,Phrygia / Lydia / Media / Babylon,0,Ad,Ab,Ab,Aa,Aa,Aa
+,I,,5,Ancient Conjectural Flags,"Greece 1 (Sparta, Peleopeon League. Etc.)",0,Ae,Ac,Ac,Ab,Ab,Ab
+,I,,6,Ancient Conjectural Flags,"Greece 2 (Athens, Corinth, Thebes, etc.)",0,Af,Ac,Ac,Ab,Ab,Ab
+,I,,7,Ancient Conjectural Flags,Macedonia and Allies,0,Ag,Ad,Ad,Ab,Ab,Ab
+,I,,8,Ancient Conjectural Flags,Persia  and Allies,0,Ah,Ad,Ad,Ab,Ab,Ab
+,I,,9,Ancient Conjectural Flags,Republican Rome and Allies,0,Aj,Ae,Ae,Ac,Ac,Ac
+,I,,10,Ancient Conjectural Flags,Carthage and Allies,0,Ak,Ae,Ae,Ac,Ac,Ac
+,I,,11,Ancient Conjectural Flags,Imperial Rome and Allies,0,Al,Af,Af,Ac,Ac,Ac
+,I,,12,Ancient Conjectural Flags,Parthians and Allies,0,Am,Af,Af,Ac,Ac,Ac
+,I,,13,Ancient Conjectural Flags,Celtic Nations and Allies,0,An,Ag,Ag,Ad,Ad,Ad
+,I,,14,Ancient Conjectural Flags,Normans and Allies,0,Ap,Ag,Ag,Ad,Ad,Ad
+,I,,15,Ancient Conjectural Flags,Angles/Saxons and Allies,0,Aq,Ah,Ah,Ad,Ad,Ad
+,I,,16,Ancient Conjectural Flags,Vikings and Allies,0,Ar,Ah,Ah,Ad,Ad,Ad
+2,I,A,17,Modern Naval Jacks Used for Medieval Flags,1,0,As,Aj,Aj,Ae,Ae,Ae
+2,I,A,18,Modern Naval Ensigns for Medieval Flags,1,0,At,Aj,Aj,Ae,Ae,Ae
+,I,,19,Modern Naval Jacks Used for Medieval Flags,2,0,Au,Ak,Ak,Ae,Ae,Ae
+,I,,20,Modern Naval Ensigns for Medieval Flags,2,0,Av,Ak,Ak,Ae,Ae,Ae
+2,I,C,21,Pirate Flags,,0,Aw,Al,Al,Af,Af,Af
+2,I,C,22,Heraldic Shield Divisions,,0,Ax,Al,Al,Af,Af,Af
+2,I,D,23,Medieval Animal Banners,,0,Ay,Am,Am,Af,Af,Af
+2,I,D,24,Medieval Heraldic Icons on Banners,,0,Az,Am,Am,Af,Af,Af
+2,I,E,25,Divisions and Ordinaries,Blue,0,Ba,An,An,Ag,Ag,Ag
+2,I,E,26,Divisions and Ordinaries,Black,0,Bb,An,An,Ag,Ag,Ag
+2,I,F,27,Divisions and Ordinaries,Red,0,Bc,Ap,Ap,Ag,Ag,Ag
+2,I,F,28,Divisions and Ordinaries,Green,0,Bd,Ap,Ap,Ag,Ag,Ag
+2,I,G,29,Crusader Era Armies,Basic Cross Designs,0,Be,Aq,Aq,Ah,Ah,Ah
+2,I,H,30,Crusader Era Armies,Islamic Banner Designs,0,Bf,Aq,Aq,Ah,Ah,Ah
+2,I,K,31,Tannenburg / Grunwald 1410,Teutonic Knights,0,Bg,Ar,Ar,Ah,Ah,Ah
+2,I,L,32,Tannenburg / Grunwald 1410,Poland & Lithuania,0,Bh,Ar,Ar,Ah,Ah,Ah
+,I,,33,Crusader Armies,Christians,0,Bj,As,As,Aj,Aj,Aj
+,I,,34,Crusader Armies,Seljuks,0,Bk,As,As,Aj,Aj,Aj
+,I,,35,Medieval Chinese Armies,1,0,Bl,At,At,Aj,Aj,Aj
+,I,,36,Medieval Chinese Armies,2,0,Bm,At,At,Aj,Aj,Aj
+2,I,M,37,"States of Germany, Brazil and Spain",1,0,Bn,Au,Au,Ak,Ak,Ak
+2,I,N,38,"States of Germany, Brazil and Spain",2,0,Bp,Au,Au,Ak,Ak,Ak
+2,I,O,39,"Provinces of Norway, Argentina and Italy",1,0,Bq,Av,Av,Ak,Ak,Ak
+2,I,P,40,"Provinces of Norway, Argentina and Italy",2,0,Br,Av,Av,Ak,Ak,Ak
+2,I,Q,41,"Provinces of Austria, Canada and UK/France",,0,Bs,Aw,Aw,Al,Al,Al
+2,I,R,42,Historic Regions of France,,0,Bt,Aw,Aw,Al,Al,Al
+2,I,S,43,Provinces and Regions of Belgium and Netherlands,,0,Bu,Ax,Ax,Al,Al,Al
+2,I,T,44,Cantons of Switzerland,,0,Bv,Ax,Ax,Al,Al,Al
+2,I,U,45,Samurai Flags from Japanese Prefectures,1,0,Bw,Ay,Ay,Am,Am,Am
+2,I,V,46,Samurai Flags from Japanese Prefectures,2,0,Bx,Ay,Ay,Am,Am,Am
+2,I,W,47,Samurai Flags from Japan,Takeda 1,0,By,Az,Az,Am,Am,Am
+2,I,X,48,Samurai Flags from Japan,Uesugi 2,0,Bz,Az,Az,Am,Am,Am
+,I,,49,Medieval Period,Papacy,0,Ca,Ba,Ba,An,An,An
+,I,,50,Medieval Period,Burgundy,0,Cb,Ba,Ba,An,An,An
+,I,,51,Medieval Period,Knightly Orders,0,Cc,Bb,Bb,An,An,An
+,I,,52,Medieval Period,English,0,Cd,Bb,Bb,An,An,An
+,I,,53,Medieval Period,French,0,Ce,Bc,Bc,Ap,Ap,Ap
+,I,,54,Medieval Period,Low Countries,0,Cf,Bc,Bc,Ap,Ap,Ap
+,I,,55,Medieval Period,Central Europe,0,Cg,Bd,Bd,Ap,Ap,Ap
+,I,,56,Medieval Period,Other Crusaders,0,Ch,Bd,Bd,Ap,Ap,Ap
 2,II,C,57,100 Years War,Banners from France at Poiters,1356,Cj,Be,Be,Aq,Aq,Aq
 2,II,E,58,100 Years War,Banners from France at Crecy,1346,Ck,Be,Be,Aq,Aq,Aq
 2,II,G,59,100 Years War,Banners from France at Agincourt,1415,Cl,Bf,Bf,Aq,Aq,Aq

@@ -17,7 +17,7 @@ echo form_open('sheets/search', $attributes);
 					<select id="sheet-scale-select" class="form-control" name="scale">
 						<option>All</option>
 						<?php foreach ($scales as $scale): ?>
-							<option <?php echo $scaleValue == $scale['scale'] ? " selected" : "" ?>><?= $scale['scale'] ?></option>
+							<option <?php echo $scaleValue == $scale['scale'] ? " selected" : "" ?>><?= $scale['scale'] ?>mm</option>
 						<?php endforeach; ?>
 					</select>
 				</div>
@@ -34,9 +34,7 @@ echo form_open('sheets/search', $attributes);
 					<select id="sheet-century-select" class="form-control" name="century">
 						<option>All</option>
 						<?php foreach ($centuries as $century): ?>
-							<option <?php echo $centuryValue == $century ? " selected" : "" ?>>
-								<?= $century == CENTURY_MINIMUM ? "Pre-".CENTURY_MINIMUM : $century?>
-							</option>
+							<option <?php echo $centuryValue == $century ? " selected" : "" ?>><?= $century == CENTURY_MINIMUM ? "Pre-".CENTURY_MINIMUM : $century?>th</option>
 						<?php endforeach; ?>
 					</select>
 				</div>
@@ -120,7 +118,7 @@ echo form_open('sheets/search', $attributes);
 		<?php foreach ($sheets as $sheet_item): ?>
 			<tr>
 				<td><?= $sheet_item['name'] ?></td>
-				<td><?= $sheet_item['year'] ?></td>
+				<td><?= $sheet_item['year'] == 0 ? "Unknown" : $sheet_item['year'] ?></td>
 				<td><?= $sheet_item['era'] ?></td>
 				<td><?= $sheet_item['type'] ?></td>
 				<td><?= $sheet_item['scale'] ?></td>

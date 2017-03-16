@@ -236,9 +236,15 @@ class Sheet_model extends CI_Model {
 				$scale = $scales[$i]['scale'];
 				$scaleId = $scales[$i]['id'];
 
+				$sheetName = '';
+				if ($scale < 10) {
+					$sheetName = '0';
+				}
+				$sheetName .= $scale . $code;
 
 
-				$values = array('scale' => $scaleId, 'name' => $scale . $code);
+
+				$values = array('scale' => $scaleId, 'name' => $sheetName);
 
 				// first see if sheet exists in DB
 				$query = $this->db
