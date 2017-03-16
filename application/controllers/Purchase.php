@@ -23,7 +23,7 @@ class Purchase extends CI_Controller {
 	}
 
 	public function items() {
-		$data['sheetItems'] = $this->Purchase_model->get_sheets();
+		$data['sheetItems'] = $this->Purchase_model->get_all_sheets();
 		$data['title'] =  "Select Items";
 
 

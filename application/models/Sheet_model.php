@@ -14,7 +14,7 @@ class Sheet_model extends CI_Model {
 	{
 		if ($id == FALSE)
 		{
-			return get_sheets();
+			return $this->get_sheets();
 		} else {
 			$this->db
 				->select('s.id, s.scale, s.name, e.name as "era", t.name as "type", t.year as "year", sc.scale as "scale"')
@@ -47,7 +47,7 @@ class Sheet_model extends CI_Model {
 		}
 
 		if ($scale !== 'All') {
-			$this->db->where('s.scale', $scale);
+			$this->db->where('sc.scale', $scale);
 		}
 
 		if ($century !== 'All') {
@@ -57,7 +57,8 @@ class Sheet_model extends CI_Model {
 			}
 		}
 
-		$this->db->order_by('year asc, era asc, type asc');
+		// $this->db->order_by('year asc, era asc, type asc');
+		$this->db->order_by('name asc');
 
 		return $this->db->get()->result_array();
 	}
@@ -65,7 +66,7 @@ class Sheet_model extends CI_Model {
 	public function get_scales()
 	{
 		$this->db
-			->select('scale')
+			->select('scale, id')
 			->from('scales')
 			->order_by('scale asc');
 		return $this->db->get()->result_array();		
@@ -174,8 +175,8 @@ class Sheet_model extends CI_Model {
 		$this->db->empty_table('types');
 		$this->db->empty_table('eras');
 
-		$scales = get_scales();
-		$scaleArrayStartIndex = 7;
+		$scales = $this->get_scales();
+		$scaleArrayEndIndex = 12;
 
 		foreach ($csvFile as $csvLine) {
 			$num = $csvLine[0];
@@ -231,10 +232,13 @@ class Sheet_model extends CI_Model {
 			// $values = array('scale' => $scale, 'row' => $row, 'number' => $number, 'book' => $book, 'tab' => $tab, 'name' => $scale . $era. "-" .$type);
 			for ($i = 0; $i < sizeof($scales); $i++)
 			{
-				$code = $csvLine[$scaleArrayStartIndex + $i];
-				$scale = $scales[$i];
+				$code = $csvLine[$scaleArrayEndIndex - $i];
+				$scale = $scales[$i]['scale'];
+				$scaleId = $scales[$i]['id'];
 
-				$values = array('scale' => $scale, 'name' => $scale . $code);
+
+
+				$values = array('scale' => $scaleId, 'name' => $scale . $code);
 
 				// first see if sheet exists in DB
 				$query = $this->db
@@ -242,10 +246,11 @@ class Sheet_model extends CI_Model {
 					->from('sheets')
 					->where($values)
 					->get();
-				$sheetId = $query->row()->id;
-
-				// if sheet doesn't exists, insert it
-				if (!isset($sheetId)) {
+				$sheetRow = $query->row();
+				if (isset($sheetRow)) {
+					$sheetId = $sheetRow->id;
+				} else {
+					// if sheet doesn't exists, insert it
 					$this->db->insert('sheets', $values);
 					$query = $this->db
 						->select('id')

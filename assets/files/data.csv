@@ -1,185 +1,240 @@
-0.5,2,1,A,Modern Naval Jacks,Used for Medieval Flags 1,Medieval,,,,,,
-0.75,2,1,B,Modern Naval Jacks,Ensigns for Medieval Flags 1,Medieval,,,,,,
-1,,1,,Modern Naval Jacks,Used for Medieval Flags 2,Medieval,,,,,,
-1.25,,1,,Modern Naval Jacks,Ensigns for Medieval Flags 2,Medieval,,,,,,
-1.5,2,2,C,Pirate Flags,,Medieval,,,,,,
-1.75,2,2,D,Heraldic Shield Divisions,,Medieval,,,,,,
-2,2,2,I,Medieval Animal Banners,,Medieval,,,,,,
-2.25,2,2,J,Medieval Heraldic Icons on Banners,,Medieval,,,,,,
-2.5,2,3,E,Divisions and Ordinaries,Blue,Medieval,,,,,,
-2.75,2,3,E,Divisions and Ordinaries,Black,Medieval,,,,,,
-3,2,3,F,Divisions and Ordinaries,Red,Medieval,,,,,,
-3.25,2,3,F,Divisions and Ordinaries,Green,Medieval,,,,,,
-3.5,2,4,G,Crusader Era Armies,Basic Cross Designs,Medieval,,,,,,
-3.75,2,4,H,Crusader Era Armies,Islamic Banner Designs,Medieval,,,,,,
-4,2,4,K,Grunwald 1410,Teutonic Knights at Tannenburg,Medieval,,,,,,
-4.25,2,4,L,Grunwald 1410,Poland & Lithuania at Tannenburg,Medieval,,,,,,
-4.5,,5,,Crusader Armies,Christians,Medieval,,,,,,
-4.75,,5,,Crusader Armies,Seljuks,Medieval,,,,,,
-5,,5,,Medieval Chinese Armies,1,Medieval,,,,,,
-5.25,,5,,Medieval Chinese Armies,2,Medieval,,,,,,
-5.5,2,6,M,"States of Germany, Brazil and Spain",1,Medieval,,,,,,
-5.75,2,6,N,"States of Germany, Brazil and Spain",2,Medieval,,,,,,
-6,2,6,O,"Provinces of Norway, Argentina and Italy",1,Medieval,,,,,,
-6.25,2,6,P,"Provinces of Norway, Argentina and Italy",2,Medieval,,,,,,
-6.5,2,7,Q,"Provinces of Austria, Canada and UK/France",,Medieval,,,,,,
-6.75,2,7,R,Medieval Flags from Historic Regions of France,,Medieval,,,,,,
-7,2,7,S,Provinces and Regions of Belgium and Netherlands,,Medieval,,,,,,
-7.25,2,7,T,Cantons of Switzerland,,Medieval,,,,,,
-7.5,2,8,U,Samurai Flags from Japanese Prefectures,1,Medieval,,,,,,
-7.75,2,8,V,Samurai Flags from Japanese Prefectures,2,Medieval,,,,,,
-8,2,8,W,Samurai Flags from Japan,Takeda,Medieval,,,,,,
-8.25,2,8,X,Samurai Flags from Japan,Uesugi,Medieval,,,,,,
-10.5,2,11,C,100 Years War,Banners from France at Poiters,1356,,,,,,
-10.75,2,11,E,100 Years War,Banners from France at Crecy,1346,,,,,,
-11,2,11,G,100 Years War,Banners from France at Agincourt,1415,,,,,,
-11.25,2,11,A,100 Years War,Banners from France (Generic),1346,,,,,,
-11.5,2,12,D,100 Years War,Banners from England at Poiters,1356,,,,,,
-11.75,2,12,F,100 Years War,Banners from England at Crecy,1346,,,,,,
-12,2,12,H,100 Years War,Banners from England at Agincourt,1415,,,,,,
-12.25,2,12,B,100 Years War,Banners from England (Generic),1346,,,,,,
-12.5,2,13,K,War of the Roses,House of Lancaster,1455,,,,,,
-12.75,2,13,K,War of the Roses,Tudor and House of Lancaster 2 ,1455,,,,,,
-13,2,13,L,War of the Roses,House of York,1455,,,,,,
-13.25,2,13,L,War of the Roses,Tudor and House of York 2,1455,,,,,,
-13.5,2,14,M,Flags of England,1487 - 1603,1487,,,,,,
-13.75,2,14,N,Flags of England,Scotland and Ireland 1487 - 1603,1487,,,,,,
-14,2,14,O,Flags of the Spanish Netherlands 1556 - 1609,,1556,,,,,,
-14.25,2,14,P,Flags of the United Provinces 1566 - 1609,,1566,,,,,,
-14.5,,15,,Anglo Dutch Wars,England,1652,,,,,,
-14.75,,15,,Anglo Dutch Wars,Dutch,1652,,,,,,
-15,,15,,Ottoman - Habsburg Wars,Habsburg,1683,,,,,,
-15.25,,15,,Ottoman - Habsburg Wars,Ottoman,1683,,,,,,
-15.5,,16,,League of Cambrai,Papal States & Venice,1510,,,,,,
-15.75,,16,,League of Cambrai,HRE and Spain,1510,,,,,,
-16,,16,,League of Cambrai,Ferrara and France,1510,,,,,,
-16.25,,16,,League of Cambrai,"England; Swiss, Milan, Scots",1510,,,,,,
-16.5,,17,,Polish Ottoman War,Polish/Lithuianian,1614,,,,,,
-16.75,,17,,Polish Ottoman War,Ottoman,1614,,,,,,
-17,,17,,Franco Spanish War,France,1642,,,,,,
-17.25,,17,,Franco Spanish War:,Spain,1642,,,,,,
-17.5,3,18,Q,30 Years War,Catholic 1,1618,,,,,,
-17.75,3,18,R,30 Years War,Catholic 2,1618,,,,,,
-18,3,18,S,30 Years War,Catholic 3,1618,,,,,,
-18.25,3,18,T,30 Years War,Catholic 4,1618,,,,,,
-18.5,3,19,U,30 Years War,Protestant 1,1618,,,,,,
-18.75,3,19,V,30 Years War,Protestant 2,1618,,,,,,
-19,3,19,W,30 Years War,Protestant 3,1618,,,,,,
-19.25,3,19,X,30 Years War,Protestant 4,1618,,,,,,
-19.5,2,20,Y,English Civil War,Royalist and Parliament 1,1640,,,,,,
-19.75,2,20,Y,English Civil War,Royalist and Parliament 2,1640,,,,,,
-20,2,20,Z,English Civil War,"Scot, Welsh, Irish & Covenenent 1",1640,,,,,,
-20.25,2,20,Z,English Civil War,"Scot, Welsh, Irish & Covenenent 2",1640,,,,,,
-20.5,,21,,Wars of Louis XIV,France,1665,,,,,,
-20.75,,21,,Wars of Louis XIV,Dutch / Northern Europe,1665,,,,,,
-21,,21,,Wars of Louis XIV,Spanish Empire and HRE,1665,,,,,,
-21.25,,21,,Wars of Louis XIV,Triple Alliance,1665,,,,,,
-21.5,2,22,C,Great Northern War,Sweden - Company Colors,1701,,,,,,
-21.75,2,22,C,Great Northern War,Sweden - Colonel's Colors,1701,,,,,,
-22,2,22,D,Great Northern War,Russia - Company Colors,1701,,,,,,
-22.25,2,22,D,Great Northern War,Russia - Colonel's Colors,1701,,,,,,
-22.5,,23,,Great Northern War,Saxony,1701,,,,,,
-22.75,,23,,Great Northern War,Poland / Lithuania,1701,,,,,,
-23,,23,,Great Northern War,Denmark / Norway / Ottomans,1701,,,,,,
-23.25,,23,,Great Northern War,Prussia and Hanover,1701,,,,,,
-23.5,,24,,War of Spanish Succession,HRE:  Austrian Prussian Hanover,1702,,,,,,
-23.75,,24,,War of Spanish Succession,Great Britain; Dutch; Savoy,1702,,,,,,
-24,,24,,War of Spanish Succession,France and Bavaria,1702,,,,,,
-24.25,,24,,War of Spanish Succession,Spain (Charles and Phillip),1702,,,,,,
-24.5,,25,,War of Polish Succession,"Poland, Stanislaw, France",1732,,,,,,
-24.75,,25,,War of Polish Succession,"Spain, Sardinia, Parma",1732,,,,,,
-25,,25,,War of Polish Succession,Poland Augustus; Hapsburgs,1732,,,,,,
-25.25,,25,,War of Polish Succession,"Russia, Saxony and Prussia",1732,,,,,,
-25.5,,26,,War of Austrian Succession,France and Allies,1702,,,,,,
-25.75,,26,,War of Austrian Succession,Prussia and Allies,1702,,,,,,
-26,,26,,War of Austrian Succession,Habsburg and Allies,1702,,,,,,
-26.25,,26,,War of Austrian Succession,Great Britain and Allies,1702,,,,,,
-26.5,,27,,Seven Years War,Great Britain,1732,,,,,,
-26.75,,27,,Seven Years War,"Prussia, Portugal, Hanover",1732,,,,,,
-27,,27,,Seven Years War,France and Spain,1732,,,,,,
-27.25,,27,,Seven Years War,HRE; Russia; Sweden,1732,,,,,,
-27.5,2,28,E,France 18th century,1,1720,,,,,,
-27.75,2,28,E,France 18th century,2,1720,,,,,,
-28,2,28,F,England 18th century,1,1720,,,,,,
-28.25,2,28,F,England 18th century,2,1720,,,,,,
-28.5,2,29,E,France 18th century,3,1720,,,,,,
-28.75,,29,,France 18th century,4,1720,,,,,,
-29,2,29,F,England 18th century,3,1720,,,,,,
-29.25,,29,,England 18th century,4,1720,,,,,,
-29.5,2,30,G,Prussia 18th century,1,1720,,,,,,
-29.75,2,30,H,Prussia 18th century,2,1720,,,,,,
-30,2,30,L,Russia 18th century,1,1720,,,,,,
-30.25,2,30,M,Russia 18th century,2,1720,,,,,,
-30.5,2,31,I,Prussia 18th century,3,1720,,,,,,
-30.75,2,31,K,Prussia 18th century,4,1720,,,,,,
-31,,31,I,Russia 18th century,3,1720,,,,,,
-31.25,,31,K,Russia 18th century,4,1720,,,,,,
-31.5,2,32,P,Austria 18th century,1,1720,,,,,,
-31.75,2,32,R,Spain 18th century,1,1720,,,,,,
-32,2,32,P,Austria 18th century,2,1720,,,,,,
-32.25,2,32,R,Spain 18th century,2,1720,,,,,,
-32.5,2,33,T,USA 18th century,1,1776,,,,,,
-32.75,2,33,U,USA 18th century,2,1776,,,,,,
-33,2,33,V,USA 18th century,3,1776,,,,,,
-33.25,2,33,W,USA 18th century,4,1776,,,,,,
-33.5,,34,X,Europe 18th century,1,1776,,,,,,
-33.75,,34,Y,Europe 18th century,2,1776,,,,,,
-34,,34,Z,Europe 18th century,3,1776,,,,,,
-34.25,,34,Z,Europe 18th century,4,1776,,,,,,
-34.5,,35,,French Revolutionary Wars,France and Allies,1792,,,,,,
-34.75,,35,,French Revolutionary Wars,Austria and Allies,1792,,,,,,
-35,,35,,French Revolutionary Wars,Prussia and Allies,1792,,,,,,
-35.25,,35,,French Revolutionary Wars,Great Britain and Allies,1792,,,,,,
-41,4,41,A,Austria,"1794, 1804, 1806",1806,,,,,,
-41,2,41,A,Austria,1806 Ordinarfarne,1806,,,,,,
-42,4,42,B,Britain 1801 Pattern Group,1,1801,,,,,,
-42,4,42,B,Britain 1801 Pattern Group,2,1801,,,,,,
-43,4,43,C,France 1805 Pattern,Light Regiments,1805,,,,,,
-43,4,43,C,France 1805 Pattern,Line Regiments,1805,,,,,,
-44,4,44,D,France 1812 Pattern,Line Regiments,1812,,,,,,
-44,4,44,D,France 1812 Pattern,Guard Regiments,1812,,,,,,
-45,4,45,E,France 1815 Pattern,Line Regiments,1815,,,,,,
-45,2,45,E,France 1815 Pattern,Guard Regiments,1815,,,,,,
-46,4,46,F,Russia 1812 Pattern,Line Regiments Group 1,1812,,,,,,
-46,4,46,F,Russia 1812 Pattern,Line Regiments Group 2,1812,,,,,,
-46,4,46,F,Russia 1812 Pattern,Line Regiments Group 3,1812,,,,,,
-46,,46,F,Russia 1812 Pattern,Line Regiments Group 4,1812,,,,,,
-47,2,47,G,Prussia 1800 Pattern,Line Regiments Group 1,1806,,,,,,
-47,2,47,G,Prussia 1800 Pattern,Line Regiments Group 2,1806,,,,,,
-48,4,48,H,"Saxony, Bavaria, Naples (1811), Brunswick",,1812,,,,,,
-48,4,48,I,"Wurtumberg, Baden, Westphalia",,1812,,,,,,
-49,4,49,J,Italy and Naples,,1812,,,,,,
-49,4,49,K,"Spain and Portugal Wurzburg, Hesse Darmstat, Baden",,1812,,,,,,
-49,,49,K,Sweden and Poland,,1812,,,,,,
-50,4,50,L,"Netherlands, Brunswick, Berg, Naples (1811), plus ^",,1812,,,,,,
-50,,50,L,"Bavaria, Saxony, Westphalia, Naples, Italy. Etc.",,1812,,,,,,
-51,2,51,M,Waterloo,"Netherlands, Nassau, Hanover",1815,,,,,,
-51,2,51,M,Waterloo,"Brunswick, Nassau, Hanover",1815,,,,,,
-52,2,52,N,Waterloo,Prussia Militia,1815,,,,,,
-52,2,52,O,Waterloo,Britain,1815,,,,,,
-53,2,53,P,Mexican American War,Mexico,1824,,,,,,
-53,2,53,P,Mexican American War,United States. Texas,1824,,,,,,
-61,4,61,R,Crimean War,Russia,1850,,,,,,
-61,4,61,S,Crimean War,France,1850,,,,,,
-61,4,61,S,Crimean War,Ottoman Empire,1850,,,,,,
-61,4,61,S,Crimean War,Great Britain,1850,,,,,,
-62,2,62,T,American Civil War,Union 1,1861,,,,,,
-62,2,62,T,American Civil War,Union 2,1861,,,,,,
-62,2,62,T,American Civil War,Union 3,1861,,,,,,
-62,2,62,T,American Civil War,Union 4,1861,,,,,,
-63,2,63,U,American Civil War,Confederate 1,1861,,,,,,
-63,2,63,U,American Civil War,Confederate 2,1861,,,,,,
-63,2,63,U,American Civil War,Confederate 3,1861,,,,,,
-63,2,63,U,American Civil War,Confederate 4,1861,,,,,,
-64,2,64,V,American Civil War,Confederate 5,1861,,,,,,
-64,2,64,V,American Civil War,Confederate 6,1861,,,,,,
-64,2,64,V,American Civil War,Union 5,1861,,,,,,
-64,2,64,V,American Civil War,Union 6,1861,,,,,,
-66,2,66,W,World War One,Allied Powers Sheet 1,1914,,,,,,
-66,,66,W,World War One,Allied Powers Sheet 2,1914,,,,,,
-67,2,67,X,World War One,Central Powers Sheet 1,1914,,,,,,
-67,,67,X,World War One,Central Powers Sheet 2,1914,,,,,,
-68,2,68,Y,World War Two,Allied Powers Sheet 1,1939,,,,,,
-68,2,68,Y,World War Two,Allied Powers Sheet 2,1939,,,,,,
-69,2,69,Z,World War Two,Axis Powers Sheet 1,1939,,,,,,
-69,2,69,Z,World War Two,Axis Powers Sheet 2,1939,,,,,,
+﻿,I,,1,Conjectural Flags,Babylon / Assyria / Sumer /Akkad / Ur,Ancient,Aa,Aa,Aa,Aa,Aa,Aa
+,I,,2,Conjectural Flags,Egypt / Hittite / Mitanni / Assyria,Ancient,Ab,Aa,Aa,Aa,Aa,Aa
+,I,,3,Conjectural Flags,Phillistine / Israel / Judah / Egypt,Ancient,Ac,Ab,Ab,Aa,Aa,Aa
+,I,,4,Conjectural Flags,Phrygia / Lydia / Media / Babylon,Ancient,Ad,Ab,Ab,Aa,Aa,Aa
+,I,,5,Conjectural Flags,"Greece 1 (Sparta, Peleopeon League. Etc.)",Ancient,Ae,Ac,Ac,Ab,Ab,Ab
+,I,,6,Conjectural Flags,"Greece 2 (Athens, Corinth, Thebes, etc.)",Ancient,Af,Ac,Ac,Ab,Ab,Ab
+,I,,7,Conjectural Flags,Macedonia and Allies,Ancient,Ag,Ad,Ad,Ab,Ab,Ab
+,I,,8,Conjectural Flags,Persia  and Allies,Ancient,Ah,Ad,Ad,Ab,Ab,Ab
+,I,,9,Conjectural Flags,Republican Rome and Allies,Ancient,Aj,Ae,Ae,Ac,Ac,Ac
+,I,,10,Conjectural Flags,Carthage and Allies,Ancient,Ak,Ae,Ae,Ac,Ac,Ac
+,I,,11,Conjectural Flags,Imperial Rome and Allies,Ancient,Al,Af,Af,Ac,Ac,Ac
+,I,,12,Conjectural Flags,Parthians and Allies,Ancient,Am,Af,Af,Ac,Ac,Ac
+,I,,13,Conjectural Flags,Celtic Nations and Allies,Ancient,An,Ag,Ag,Ad,Ad,Ad
+,I,,14,Conjectural Flags,Normans and Allies,Ancient,Ap,Ag,Ag,Ad,Ad,Ad
+,I,,15,Conjectural Flags,Angles/Saxons and Allies,Ancient,Aq,Ah,Ah,Ad,Ad,Ad
+,I,,16,Conjectural Flags,Vikings and Allies,Ancient,Ar,Ah,Ah,Ad,Ad,Ad
+2,I,A,17,Modern Naval Jacks Used for Medieval Flags,1,Medieval,As,Aj,Aj,Ae,Ae,Ae
+2,I,A,18,Modern Naval Ensigns for Medieval Flags,1,Medieval,At,Aj,Aj,Ae,Ae,Ae
+,I,,19,Modern Naval Jacks Used for Medieval Flags,2,Medieval,Au,Ak,Ak,Ae,Ae,Ae
+,I,,20,Modern Naval Ensigns for Medieval Flags,2,Medieval,Av,Ak,Ak,Ae,Ae,Ae
+2,I,C,21,Pirate Flags,,Medieval,Aw,Al,Al,Af,Af,Af
+2,I,C,22,Heraldic Shield Divisions,,Medieval,Ax,Al,Al,Af,Af,Af
+2,I,D,23,Medieval Animal Banners,,Medieval,Ay,Am,Am,Af,Af,Af
+2,I,D,24,Medieval Heraldic Icons on Banners,,Medieval,Az,Am,Am,Af,Af,Af
+2,I,E,25,Divisions and Ordinaries,Blue,Medieval,Ba,An,An,Ag,Ag,Ag
+2,I,E,26,Divisions and Ordinaries,Black,Medieval,Bb,An,An,Ag,Ag,Ag
+2,I,F,27,Divisions and Ordinaries,Red,Medieval,Bc,Ap,Ap,Ag,Ag,Ag
+2,I,F,28,Divisions and Ordinaries,Green,Medieval,Bd,Ap,Ap,Ag,Ag,Ag
+2,I,G,29,Crusader Era Armies,Basic Cross Designs,Medieval,Be,Aq,Aq,Ah,Ah,Ah
+2,I,H,30,Crusader Era Armies,Islamic Banner Designs,Medieval,Bf,Aq,Aq,Ah,Ah,Ah
+2,I,K,31,Tannenburg / Grunwald 1410,Teutonic Knights,Medieval,Bg,Ar,Ar,Ah,Ah,Ah
+2,I,L,32,Tannenburg / Grunwald 1410,Poland & Lithuania,Medieval,Bh,Ar,Ar,Ah,Ah,Ah
+,I,,33,Crusader Armies,Christians,Medieval,Bj,As,As,Aj,Aj,Aj
+,I,,34,Crusader Armies,Seljuks,Medieval,Bk,As,As,Aj,Aj,Aj
+,I,,35,Medieval Chinese Armies,1,Medieval,Bl,At,At,Aj,Aj,Aj
+,I,,36,Medieval Chinese Armies,2,Medieval,Bm,At,At,Aj,Aj,Aj
+2,I,M,37,"States of Germany, Brazil and Spain",1,Medieval,Bn,Au,Au,Ak,Ak,Ak
+2,I,N,38,"States of Germany, Brazil and Spain",2,Medieval,Bp,Au,Au,Ak,Ak,Ak
+2,I,O,39,"Provinces of Norway, Argentina and Italy",1,Medieval,Bq,Av,Av,Ak,Ak,Ak
+2,I,P,40,"Provinces of Norway, Argentina and Italy",2,Medieval,Br,Av,Av,Ak,Ak,Ak
+2,I,Q,41,"Provinces of Austria, Canada and UK/France",,Medieval,Bs,Aw,Aw,Al,Al,Al
+2,I,R,42,Historic Regions of France,,Medieval,Bt,Aw,Aw,Al,Al,Al
+2,I,S,43,Provinces and Regions of Belgium and Netherlands,,Medieval,Bu,Ax,Ax,Al,Al,Al
+2,I,T,44,Cantons of Switzerland,,Medieval,Bv,Ax,Ax,Al,Al,Al
+2,I,U,45,Samurai Flags from Japanese Prefectures,1,Medieval,Bw,Ay,Ay,Am,Am,Am
+2,I,V,46,Samurai Flags from Japanese Prefectures,2,Medieval,Bx,Ay,Ay,Am,Am,Am
+2,I,W,47,Samurai Flags from Japan,Takeda 1,Medieval,By,Az,Az,Am,Am,Am
+2,I,X,48,Samurai Flags from Japan,Uesugi 2,Medieval,Bz,Az,Az,Am,Am,Am
+,I,,49,Medieval Period,Papacy,Medieval,Ca,Ba,Ba,An,An,An
+,I,,50,Medieval Period,Burgundy,Medieval,Cb,Ba,Ba,An,An,An
+,I,,51,Medieval Period,Knightly Orders,Medieval,Cc,Bb,Bb,An,An,An
+,I,,52,Medieval Period,English,Medieval,Cd,Bb,Bb,An,An,An
+,I,,53,Medieval Period,French,Medieval,Ce,Bc,Bc,Ap,Ap,Ap
+,I,,54,Medieval Period,Low Countries,Medieval,Cf,Bc,Bc,Ap,Ap,Ap
+,I,,55,Medieval Period,Central Europe,Medieval,Cg,Bd,Bd,Ap,Ap,Ap
+,I,,56,Medieval Period,Other Crusaders,Medieval,Ch,Bd,Bd,Ap,Ap,Ap
+2,II,C,57,100 Years War,Banners from France at Poiters,1356,Cj,Be,Be,Aq,Aq,Aq
+2,II,E,58,100 Years War,Banners from France at Crecy,1346,Ck,Be,Be,Aq,Aq,Aq
+2,II,G,59,100 Years War,Banners from France at Agincourt,1415,Cl,Bf,Bf,Aq,Aq,Aq
+2,II,A,60,100 Years War,Banners from France (Generic),1346,Cm,Bf,Bf,Aq,Aq,Aq
+2,II,D,61,100 Years War,Banners from England at Poiters,1356,Cn,Bg,Bg,Ar,Ar,Ar
+2,II,F,62,100 Years War,Banners from England at Crecy,1346,Cp,Bg,Bg,Ar,Ar,Ar
+2,II,H,63,100 Years War,Banners from England at Agincourt,1415,Cq,Bh,Bh,Ar,Ar,Ar
+2,II,B,64,100 Years War,Banners from England (Generic),1346,Cr,Bh,Bh,Ar,Ar,Ar
+2,II,K,65,War of the Roses,House of Lancaster,1455,Cs,Bj,Bj,As,As,As
+2,II,K,66,War of the Roses,Tudor and House of Lancaster 2 ,1455,Ct,Bj,Bj,As,As,As
+2,II,L,67,War of the Roses,House of York,1455,Cu,Bk,Bk,As,As,As
+2,II,L,68,War of the Roses,Tudor and House of York 2,1455,Cv,Bk,Bk,As,As,As
+2,II,M,69,Flags of England,1487 - 1603,1487,Cw,Bl,Bl,At,At,At
+2,II,N,70,Flags of England,Scotland and Ireland 1487 - 1603,1487,Cx,Bl,Bl,At,At,At
+2,II,O,71,Flags of the Spanish Netherlands,1556 - 1609,1556,Cy,Bm,Bm,At,At,At
+2,II,P,72,Flags of the United Provinces,1566 - 1609,1566,Cz,Bm,Bm,At,At,At
+,II,,73,Anglo Dutch Wars,England,1652,Da,Bn,Bn,Au,Au,Au
+,II,,74,Anglo Dutch Wars,Dutch,1652,Db,Bn,Bn,Au,Au,Au
+,II,,75,Ottoman - Habsburg Wars,Habsburg,1683,Dc,Bp,Bp,Au,Au,Au
+,II,,76,Ottoman - Habsburg Wars,Ottoman,1683,Dd,Bp,Bp,Au,Au,Au
+,II,,77,League of Cambrai,Papal States & Venice,1510,De,Bq,Bq,Av,Av,Av
+,II,,78,League of Cambrai,HRE and Spain,1510,Df,Bq,Bq,Av,Av,Av
+,II,,79,League of Cambrai,Ferrara and France,1510,Dg,Br,Br,Av,Av,Av
+,II,,80,League of Cambrai,"England, Swiss, Milan, Scots",1510,Dh,Br,Br,Av,Av,Av
+,II,,81,Polish Ottoman War,Polish/Lithuianian,1614,Dj,Bs,Bs,Aw,Aw,Aw
+,II,,82,Polish Ottoman War,Ottoman,1614,Dk,Bs,Bs,Aw,Aw,Aw
+,II,,83,Franco Spanish War,France,1642,Dl,Bt,Bt,Aw,Aw,Aw
+,II,,84,Franco Spanish War,Spain,1642,Dm,Bt,Bt,Aw,Aw,Aw
+3,II,Q,85,30YW,"Catholic: HRE, Spain, Bavaria, etc.",1618,Dn,Bu,Bu,Ax,Ax,Ax
+3,II,R,86,30YW,"Catholic: Leon, Castille, Navarre, France",1618,Dp,Bu,Bu,Ax,Ax,Ax
+3,II,S,87,30YW,"Catholic: Bavaria, Austria, Imperial, Spain",1618,Dq,Bv,Bv,Ax,Ax,Ax
+3,II,T,88,30YW,"Catholic: Empire, League, Bavaria, etc.",1618,Dr,Bv,Bv,Ax,Ax,Ax
+3,II,U,89,30YW,"Protestant: Sweden, Denmark, Holstein, etc.",1618,Ds,Bw,Bw,Ay,Ay,Ay
+3,II,V,90,30YW,"Protestant: Sweden, Saxony, Brandenburg, etc.",1618,Dt,Bw,Bw,Ay,Ay,Ay
+3,II,W,91,30YW,"Protestant: Sweden, Denmark, Palatinate, etc.",1618,Du,Bx,Bx,Ay,Ay,Ay
+3,II,X,92,30YW,"Protestant: Sweden, Prussia, Saxony, etc.",1618,Dv,Bx,Bx,Ay,Ay,Ay
+2,II,Y,93,English Civil War,Royalist and Parliament 1,1640,Dw,By,By,Az,Az,Az
+2,II,Y,94,English Civil War,Royalist and Parliament 2,1640,Dx,By,By,Az,Az,Az
+2,II,Z,95,English Civil War,"Scot, Welsh, Irish & Covenenent 1",1640,Dy,Bz,Bz,Az,Az,Az
+2,II,Z,96,English Civil War,"Scot, Welsh, Irish & Covenenent 2",1640,Dz,Bz,Bz,Az,Az,Az
+,II,,97,Wars of Louis XIV,France,1665,Ea,Ca,Ca,Ba,Ba,Ba
+,II,,98,Wars of Louis XIV,Dutch / Northern Europe,1665,Eb,Ca,Ca,Ba,Ba,Ba
+,II,,99,Wars of Louis XIV,Spanish Empire and HRE,1665,Ec,Cb,Cb,Ba,Ba,Ba
+,II,,100,Wars of Louis XIV,Triple Alliance,1665,Ed,Cb,Cb,Ba,Ba,Ba
+2,III,C,101,Great Northern War,Sweden - Company Colors,1701,Ee,Cc,Cc,Bb,Bb,Bb
+2,III,C,102,Great Northern War,Sweden - Colonel's Colors,1701,Ef,Cc,Cc,Bb,Bb,Bb
+2,III,D,103,Great Northern War,Russia - Company Colors,1701,Eg,Cd,Cd,Bb,Bb,Bb
+2,III,D,104,Great Northern War,Russia - Colonel's Colors,1701,Eh,Cd,Cd,Bb,Bb,Bb
+,III,,105,Great Northern War,Saxony,1701,Ej,Ce,Ce,Bc,Bc,Bc
+,III,,106,Great Northern War,Poland / Lithuania,1701,Ek,Ce,Ce,Bc,Bc,Bc
+,III,,107,Great Northern War,Denmark / Norway / Ottomans,1701,El,Cf,Cf,Bc,Bc,Bc
+,III,,108,Great Northern War,Prussia and Hanover,1701,Em,Cf,Cf,Bc,Bc,Bc
+,III,,109,War of Spanish Succession,HRE: Austrian Prussian Hanover,1702,En,Cg,Cg,Bd,Bd,Bd
+,III,,110,War of Spanish Succession,"Great Britain, Dutch, Savoy",1702,Ep,Cg,Cg,Bd,Bd,Bd
+,III,,111,War of Spanish Succession,France and Bavaria,1702,Eq,Ch,Ch,Bd,Bd,Bd
+,III,,112,War of Spanish Succession,Spain (Charles and Phillip),1702,Er,Ch,Ch,Bd,Bd,Bd
+,III,,113,War of Polish Succession,"Poland Stanislaw, France",1732,Es,Cj,Cj,Be,Be,Be
+,III,,114,War of Polish Succession,"Spain, Sardinia, Parma",1732,Et,Cj,Cj,Be,Be,Be
+,III,,115,War of Polish Succession,"Poland Augustus, Hapsburgs",1732,Eu,Ck,Ck,Be,Be,Be
+,III,,116,War of Polish Succession,"Russia, Saxony and Prussia",1732,Ev,Ck,Ck,Be,Be,Be
+,III,,117,War of Austrian Succession,France and Allies,1702,Ew,Cl,Cl,Bf,Bf,Bf
+,III,,118,War of Austrian Succession,Prussia and Allies,1702,Ex,Cl,Cl,Bf,Bf,Bf
+,III,,119,War of Austrian Succession,Habsburg and Allies,1702,Ey,Cm,Cm,Bf,Bf,Bf
+,III,,120,War of Austrian Succession,Great Britain and Allies,1702,Ez,Cm,Cm,Bf,Bf,Bf
+2,III,E,121,France 18th C,Sonnemberg Etc.,1740,Fa,Cn,Cn,Bg,Bg,Bg
+2,III,E,122,France 18th C,"Chateau, Maison du Roi Etc.",1740,Fb,Cn,Cn,Bg,Bg,Bg
+2,III,F,123,England 18th C,Regiments and Colours,1740,Fc,Cp,Cp,Bg,Bg,Bg
+2,III,F,124,England 18th C,Regiments and colours,1740,Fd,Cp,Cp,Bg,Bg,Bg
+2,III,E,125,France 18th C,Bourgogne Etc.,1740,Fe,Cq,Cq,Bh,Bh,Bh
+,III,,126,France 18th C,"Fleur de Lis, Etc.",1740,Ff,Cq,Cq,Bh,Bh,Bh
+2,III,F,127,England 18th C,Regiments and Colours,1740,Fg,Cr,Cr,Bh,Bh,Bh
+,III,,128,England 18th C,Regiments and Colours,1740,Fh,Cr,Cr,Bh,Bh,Bh
+2,III,G,129,Prussia 18th C,Leibfahne & Regimentersfahne 1,1740,Fj,Cs,Cs,Bj,Bj,Bj
+2,III,H,130,Prussia 18th C,Leibfahne & Regimentersfahne 2,1740,Fk,Cs,Cs,Bj,Bj,Bj
+2,III,L,131,Russia 18th C,~Leibfahne & Regimentersfahne 1,1740,Fl,Ct,Ct,Bj,Bj,Bj
+2,III,M,132,Russia 18th C,~Leibfahne & Regimentersfahne 2,1740,Fm,Ct,Ct,Bj,Bj,Bj
+2,III,I,133,Prussia 18th C,Leibfahne & Regimentersfahne 3,1740,Fn,Cu,Cu,Bk,Bk,Bk
+2,III,K,134,Prussia 18th C,Leibfahne & Regimentersfahne 4,1740,Fp,Cu,Cu,Bk,Bk,Bk
+,III,I,135,Russia 18th C,~Leibfahne & Regimentersfahne 3,1740,Fq,Cv,Cv,Bk,Bk,Bk
+,III,K,136,Russia 18th C,~Leibfahne & Regimentersfahne 4,1740,Fr,Cv,Cv,Bk,Bk,Bk
+2,III,P,137,Austria 18th C,Imperial Eagle / Virgin Mary,1740,Fs,Cw,Cw,Bl,Bl,Bl
+2,III,R,138,Spain 18th C,Cross of Burgundy / Coat of Arms,1740,Ft,Cw,Cw,Bl,Bl,Bl
+2,III,P,139,Austria 18th C,Imperial Eagle / Virgin Mary,1740,Fu,Cx,Cx,Bl,Bl,Bl
+2,III,R,140,Spain 18th C,Cross of Burgundy / Coat of Arms,1740,Fv,Cx,Cx,Bl,Bl,Bl
+,III,,141,Seven Years War,England,1757,Fw,Cy,Cy,Bm,Bm,Bm
+,III,,142,Seven Years War,"Prussia, Portugal, Hanover",1757,Fx,Cy,Cy,Bm,Bm,Bm
+,III,,143,Seven Years War,France and Spain,1757,Fy,Cz,Cz,Bm,Bm,Bm
+,III,,144,Seven Years War,"ReichsArmee, Russia, Sweden",1757,Fz,Cz,Cz,Bm,Bm,Bm
+2,III,T,145,USA 18th C,"Stars and Stripes, Many variations",1776,Ga,Da,Da,Bn,Bn,Bn
+2,III,U,146,USA 18th C,"Liberty, Bennington, Grand Union",1776,Gb,Da,Da,Bn,Bn,Bn
+2,III,V,147,USA 18th C,"Appeal to Heaven, Don’t Tread on Me, etc",1776,Gc,Db,Db,Bn,Bn,Bn
+2,III,W,148,USA 18th C,"Rhode Island, MD, NY etc.",1776,Gd,Db,Db,Bn,Bn,Bn
+,III,X,149,Europe 18th C,England in USA,1776,Ge,Dc,Dc,Bp,Bp,Bp
+,III,Y,150,Europe 18th C,France in USA,1776,Gf,Dc,Dc,Bp,Bp,Bp
+,III,Z,151,Europe 18th C,Germany in USA,1776,Gg,Dd,Dd,Bp,Bp,Bp
+,III,Z,152,Europe 18th C,Other Europe in USA,1776,Gh,Dd,Dd,Bp,Bp,Bp
+,III,,153,French Revolutionary Wars,France and Allies,1792,Gj,De,De,Bq,Bq,Bq
+,III,,154,French Revolutionary Wars,Austria and Allies,1792,Gk,De,De,Bq,Bq,Bq
+,III,,155,French Revolutionary Wars,Prussia and Russia,1792,Gl,Df,Df,Bq,Bq,Bq
+,III,,156,French Revolutionary Wars,Great Britain and Allies,1792,Gm,Df,Df,Bq,Bq,Bq
+4,IV,A,157,Austria,"1794, 1804, 1806",1806,Gn,Dg,Dg,Br,Br,Br
+2,IV,A,158,Austria,1806 Ordinarfarne,1806,Gp,Dg,Dg,Br,Br,Br
+4,IV,B,159,Britain 1801 Pattern,1,1801,Gq,Dh,Dh,Br,Br,Br
+4,IV,B,160,Britain 1801 Pattern,2,1801,Gr,Dh,Dh,Br,Br,Br
+4,IV,C,161,France 1805 Pattern,Light Regiments 1-24,1805,Gs,Dj,Dj,Bs,Bs,Bs
+4,IV,C,162,France 1805 Pattern,Line Regiments 1-24,1805,Gt,Dj,Dj,Bs,Bs,Bs
+4,IV,,163,France 1805 Pattern,Light Regiments 25-48,1805,Gu,Dk,Dk,Bs,Bs,Bs
+4,IV,,164,France 1805 Pattern,Line Regiments 25-48,1805,Gv,Dk,Dk,Bs,Bs,Bs
+4,IV,E,165,France 1812 Pattern,Line Regiments,1812,Gw,Dl,Dl,Bt,Bt,Bt
+2,IV,E,166,France 1812 Pattern,Guard Regiments,1812,Gx,Dl,Dl,Bt,Bt,Bt
+4,IV,F,167,France 1815 Pattern,Line Regiments,1815,Gy,Dm,Dm,Bt,Bt,Bt
+4,IV,F,168,France 1815 Pattern,Guard Regiments,1815,Gz,Dm,Dm,Bt,Bt,Bt
+4,IV,G,169,Russia 1812 Pattern,Line Regiments Group 1,1812,Ha,Dn,Dn,Bu,Bu,Bu
+,IV,G,170,Russia 1812 Pattern,Line Regiments Group 2,1812,Hb,Dn,Dn,Bu,Bu,Bu
+2,IV,H,171,Russia 1812 Pattern,Line Regiments Group 3,1812,Hc,Dp,Dp,Bu,Bu,Bu
+2,IV,H,172,Russia 1812 Pattern,Line Regiments Group 4,1812,Hd,Dp,Dp,Bu,Bu,Bu
+4,IV,I,173,Prussia 1800 Pattern,Line Regiments Group 1,1806,He,Dq,Dq,Bv,Bv,Bv
+4,IV,I,174,Prussia 1800 Pattern,Line Regiments Group 2,1806,Hf,Dq,Dq,Bv,Bv,Bv
+4,IV,,175,Prussia 1800 Pattern,Grenadierts and Guards,1812,Hg,Dr,Dr,Bv,Bv,Bv
+4,IV,,176,Prussia 1800 Pattern,Landwehr,1812,Hh,Dr,Dr,Bv,Bv,Bv
+,IV,K,177,"Saxony, Bavaria, Naples (1811), Brunswick",,1809,Hj,Ds,Ds,Bw,Bw,Bw
+4,IV,K,178,"Wurtumberg, Baden, Westphalia",,1809,Hk,Ds,Ds,Bw,Bw,Bw
+,IV,L,179,Italy and Naples,,1809,Hl,Dt,Dt,Bw,Bw,Bw
+2,IV,L,180,Spain and Portugal,,1809,Hm,Dt,Dt,Bw,Bw,Bw
+2,IV,M,181,"Denmark, Sweden and Poland",,1809,Hn,Du,Du,Bx,Bx,Bx
+2,IV,M,182,"Wurzburg, Hesse Darmstat, Baden",,1809,Hp,Du,Du,Bx,Bx,Bx
+2,IV,N,183,"Netherlands, Brunswick, Berg, Naples",,1809,Hq,Dv,Dv,Bx,Bx,Bx
+2,IV,N,184,"Bavaria, Saxony, Westphalia, Naples, Italy",,1809,Hr,Dv,Dv,Bx,Bx,Bx
+2,IV,,185,Borodino,France,1812,Hs,Dw,Dw,By,By,By
+,IV,,186,Borodino,"Poland, Italy, Germans, etc.",1812,Ht,Dw,Dw,By,By,By
+,IV,,187,Borodino,Russia Infantry,1812,Hu,Dx,Dx,By,By,By
+,IV,,188,Borodino,"Russia Guard, Grenadier, etc.",1812,Hv,Dx,Dx,By,By,By
+,IV,,189,Leipzig,France,1813,Hw,Dy,Dy,Bz,Bz,Bz
+,IV,,190,Leipzig,"Poland, Italy, Germans, etc.",1813,Hx,Dy,Dy,Bz,Bz,Bz
+,IV,,191,Leipzig,Russia and Sweden,1813,Hy,Dz,Dz,Bz,Bz,Bz
+,IV,,192,Leipzig,Prussia and Austria,1813,Hz,Dz,Dz,Bz,Bz,Bz
+,IV,S,193,Waterloo,"Netherlands, Nassau, Hanover",1815,Ja,Ea,Ea,Ca,Ca,Ca
+,IV,S,194,Waterloo,"Brunswick, Nassau, Hanover",1815,Jb,Ea,Ea,Ca,Ca,Ca
+,IV,T,195,Waterloo,Prussia Militia,1815,Jc,Eb,Eb,Ca,Ca,Ca
+,IV,T,196,Waterloo,Britain,1815,Jd,Eb,Eb,Ca,Ca,Ca
+,V,A,197,Mexican American War,Mexico,1824,Je,Ec,Ec,Cb,Cb,Cb
+,V,A,198,Mexican American War,United States. Texas,1824,Jf,Ec,Ec,Cb,Cb,Cb
+,V,,199,Peru Bolivia War,Plus Other Latin America,1836,Jg,Ed,Ed,Cb,Cb,Cb
+,V,,200,Argentine - Uruguayn War,Plus Other Latin America,1843,Jh,Ed,Ed,Cb,Cb,Cb
+,V,,201,War of the Triple Alliance,Brazil and Paraguay,1864,Jj,Ee,Ee,Cc,Cc,Cc
+,V,,202,War of the Triple Alliance,Argentina and Uraguay,1864,Jk,Ee,Ee,Cc,Cc,Cc
+,V,,203,Pacific Wars,Chile etc.,1879,Jl,Ef,Ef,Cc,Cc,Cc
+,V,,204,Pacific Wars,Peru/Bolivia etc.,1879,Jm,Ef,Ef,Cc,Cc,Cc
+,V,,205,Colonial Wars,European Powers 1,1840,Jn,Eg,Eg,Cd,Cd,Cd
+,V,,206,Colonial Wars,European Powers 2,1840,Jp,Eg,Eg,Cd,Cd,Cd
+,V,,207,Colonial Wars,"African Powers (Mahdi, etc.)",1840,Jq,Eh,Eh,Cd,Cd,Cd
+,V,,208,Colonial Wars,"Asian Powers (India, China, etc.)",1840,Jr,Eh,Eh,Cd,Cd,Cd
+4,V,G,209,Crimean War,Russia,1850,Js,Ej,Ej,Ce,Ce,Ce
+4,V,G,210,Crimean War,France,1850,Jt,Ej,Ej,Ce,Ce,Ce
+4,V,H,211,Crimean War,Ottoman Empire,1850,Ju,Ek,Ek,Ce,Ce,Ce
+4,V,H,212,Crimean War,Great Britain,1850,Jv,Ek,Ek,Ce,Ce,Ce
+2,V,I,213,American Civil War,Union 1,1861,Jw,El,El,Cf,Cf,Cf
+2,V,I,214,American Civil War,Union 2,1861,Jx,El,El,Cf,Cf,Cf
+2,V,J,215,American Civil War,Confederate 1,1861,Jy,Em,Em,Cf,Cf,Cf
+2,V,J,216,American Civil War,Confederate 2,1861,Jz,Em,Em,Cf,Cf,Cf
+2,V,K,217,American Civil War,Union 3,1861,Ka,En,En,Cg,Cg,Cg
+2,V,K,218,American Civil War,Union 4,1861,Kb,En,En,Cg,Cg,Cg
+2,V,L,219,American Civil War,Confederate 3,1861,Kc,Ep,Ep,Cg,Cg,Cg
+2,V,L,220,American Civil War,Confederate 4,1861,Kd,Ep,Ep,Cg,Cg,Cg
+2,V,M,221,American Civil War,Union 5,1861,Ke,Eq,Eq,Ch,Ch,Ch
+2,V,M,222,American Civil War,Union 6,1861,Kf,Eq,Eq,Ch,Ch,Ch
+2,V,N,223,American Civil War,Confederate 5,1861,Kg,Er,Er,Ch,Ch,Ch
+2,V,N,224,American Civil War,Confederate 6,1861,Kh,Er,Er,Ch,Ch,Ch
+,V,,225,Austro Prussian War,,1866,Kj,Es,Es,Cj,Cj,Cj
+,V,,226,Franco-Prussian War,,1870,Kk,Es,Es,Cj,Cj,Cj
+,V,,227,Spanish American War,,1898,Kl,Et,Et,Cj,Cj,Cj
+,V,,228,Russo Japanese War,,1904,Km,Et,Et,Cj,Cj,Cj
+2,V,Q,229,World War One,Allied Powers 1,1914,Kn,Eu,Eu,Ck,Ck,Ck
+,V,Q,230,World War One,Allied Powers 2,1914,Kp,Eu,Eu,Ck,Ck,Ck
+2,V,R,231,World War One,Central Powers 1,1914,Kq,Ev,Ev,Ck,Ck,Ck
+,V,R,232,World War One,Central Powers 2,1914,Kr,Ev,Ev,Ck,Ck,Ck
+,V,,233,Spanish Civil War,Nationalists and Allies 1,1936,Ks,Ew,Ew,Cl,Cl,Cl
+,V,,234,Spanish Civil War,Nationalists and Allies 2,1936,Kt,Ew,Ew,Cl,Cl,Cl
+,V,,235,Spanish Civil War,Republicans and Allies 1,1936,Ku,Ex,Ex,Cl,Cl,Cl
+,V,,236,Spanish Civil War,Republicans and Allies 2,1936,Kv,Ex,Ex,Cl,Cl,Cl
+2,V,U,237,World War Two,Allied Powers 1,1939,Kw,Ey,Ey,Cm,Cm,Cm
+2,V,U,238,World War Two,Allied Powers 2,1939,Kx,Ey,Ey,Cm,Cm,Cm
+2,V,V,239,World War Two,Axis Powers 1,1939,Ky,Ez,Ez,Cm,Cm,Cm
+2,V,V,240,World War Two,Axis Powers 2,1939,Kz,Ez,Ez,Cm,Cm,Cm
