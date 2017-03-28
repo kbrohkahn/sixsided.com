@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="/assets/js/sorttable.js"></script>
 	<script type="text/javascript" src="/assets/js/braintree-2.29.0.min.js"></script>
 	<script type="text/javascript" src="/assets/js/helpers.js"></script>
+	<script type="text/javascript" src="/assets/js/google-analytics.js"></script>
 </head>
 <body>
 	<div class="container-fluid" id="container">
