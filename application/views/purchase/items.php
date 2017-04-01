@@ -1,2 +1,3 @@
-<h1><?php echo $title; ?></h1>
-<h4>Page under construction</h4>
+<h1><?= $title; ?></h1>
+<h4>Online purchase functionality is under construction</h4>
+<p>To purchase items, pleae contact <?= EMAIL ?></p>
