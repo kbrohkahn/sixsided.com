@@ -1,7 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Six Sided Simulations</title>
+	<title>Six Sided Simulations - Flag Cards and Sheets</title>
+	<meta name="description" content="Six Sided Simulations designs and produces collectible flag items in bulk via adhesive sheets for miniatures and the VEX card game.">
+	<meta name="keywords" content="flag,flags,vex,card,miniature,miniatures,six,sided,adhesive">
+	<meta name="author" content="Daniel Broh-Kahn">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
